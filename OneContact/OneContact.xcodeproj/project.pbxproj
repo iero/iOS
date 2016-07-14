@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB6DF83E4FE06C7AB4F6DC0 /* Pods_OneContact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F841873F7226C0C047E42CF /* Pods_OneContact.framework */; };
+		520AC1C0A1FD17522EE80F0E /* Pods_OneContactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7FD478A4AB83EA1AD4FC1C /* Pods_OneContactTests.framework */; };
 		CBB493361D37B59300A0807A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB493351D37B59300A0807A /* AppDelegate.swift */; };
-		CBB493381D37B59300A0807A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB493371D37B59300A0807A /* ViewController.swift */; };
 		CBB4933B1D37B59300A0807A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB493391D37B59300A0807A /* Main.storyboard */; };
 		CBB4933D1D37B59300A0807A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB4933C1D37B59300A0807A /* Assets.xcassets */; };
 		CBB493401D37B59300A0807A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB4933E1D37B59300A0807A /* LaunchScreen.storyboard */; };
 		CBB4934B1D37B59300A0807A /* OneContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4934A1D37B59300A0807A /* OneContactTests.swift */; };
 		CBB493561D37B59400A0807A /* OneContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB493551D37B59400A0807A /* OneContactUITests.swift */; };
+		CBB493641D37B7AC00A0807A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB493631D37B7AC00A0807A /* SearchTableViewController.swift */; };
+		E930867445ADF2D8A3B200D1 /* Pods_OneContactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E69E9E4796A62633F9801 /* Pods_OneContactUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F841873F7226C0C047E42CF /* Pods_OneContact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneContact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		542842CE1BC30F03F9971840 /* Pods-OneContact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContact.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneContact/Pods-OneContact.release.xcconfig"; sourceTree = "<group>"; };
+		5988159DEEEB5D2B2D880006 /* Pods-OneContactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C7FD478A4AB83EA1AD4FC1C /* Pods_OneContactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneContactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		712CBB47BE2ADFA30B39CD70 /* Pods-OneContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneContact/Pods-OneContact.debug.xcconfig"; sourceTree = "<group>"; };
+		795F44ED15B481F54926B5A6 /* Pods-OneContactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactUITests/Pods-OneContactUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		832E69E9E4796A62633F9801 /* Pods_OneContactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneContactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB493321D37B59300A0807A /* OneContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB493351D37B59300A0807A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBB493371D37B59300A0807A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBB4933A1D37B59300A0807A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB4933C1D37B59300A0807A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB4933F1D37B59300A0807A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		CBB493511D37B59400A0807A /* OneContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB493551D37B59400A0807A /* OneContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactUITests.swift; sourceTree = "<group>"; };
 		CBB493571D37B59400A0807A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB493631D37B7AC00A0807A /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		F482D3365DC19618103CA6D9 /* Pods-OneContactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F942CB98D71F6007D98A6823 /* Pods-OneContactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactUITests/Pods-OneContactUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB6DF83E4FE06C7AB4F6DC0 /* Pods_OneContact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520AC1C0A1FD17522EE80F0E /* Pods_OneContactTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E930867445ADF2D8A3B200D1 /* Pods_OneContactUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A7237BF7C8E78C5BF989FD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				712CBB47BE2ADFA30B39CD70 /* Pods-OneContact.debug.xcconfig */,
+				542842CE1BC30F03F9971840 /* Pods-OneContact.release.xcconfig */,
+				F482D3365DC19618103CA6D9 /* Pods-OneContactTests.debug.xcconfig */,
+				5988159DEEEB5D2B2D880006 /* Pods-OneContactTests.release.xcconfig */,
+				795F44ED15B481F54926B5A6 /* Pods-OneContactUITests.debug.xcconfig */,
+				F942CB98D71F6007D98A6823 /* Pods-OneContactUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		369EF6829D5E80CCB3B65FBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F841873F7226C0C047E42CF /* Pods_OneContact.framework */,
+				5C7FD478A4AB83EA1AD4FC1C /* Pods_OneContactTests.framework */,
+				832E69E9E4796A62633F9801 /* Pods_OneContactUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBB493291D37B59300A0807A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				CBB493491D37B59300A0807A /* OneContactTests */,
 				CBB493541D37B59400A0807A /* OneContactUITests */,
 				CBB493331D37B59300A0807A /* Products */,
+				1A7237BF7C8E78C5BF989FD9 /* Pods */,
+				369EF6829D5E80CCB3B65FBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				CBB493351D37B59300A0807A /* AppDelegate.swift */,
-				CBB493371D37B59300A0807A /* ViewController.swift */,
 				CBB493391D37B59300A0807A /* Main.storyboard */,
+				CBB493631D37B7AC00A0807A /* SearchTableViewController.swift */,
 				CBB4933C1D37B59300A0807A /* Assets.xcassets */,
 				CBB4933E1D37B59300A0807A /* LaunchScreen.storyboard */,
 				CBB493411D37B59300A0807A /* Info.plist */,
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBB4935A1D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContact" */;
 			buildPhases = (
+				161661A37E8D3F96BB970A1B /* [CP] Check Pods Manifest.lock */,
 				CBB4932E1D37B59300A0807A /* Sources */,
 				CBB4932F1D37B59300A0807A /* Frameworks */,
 				CBB493301D37B59300A0807A /* Resources */,
+				4439C3C1D24D448A02981FFD /* [CP] Embed Pods Frameworks */,
+				7B59BF1CCD580F8F71E16B6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBB4935D1D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactTests" */;
 			buildPhases = (
+				BC2F8694557ABF764CB8B635 /* [CP] Check Pods Manifest.lock */,
 				CBB493421D37B59300A0807A /* Sources */,
 				CBB493431D37B59300A0807A /* Frameworks */,
 				CBB493441D37B59300A0807A /* Resources */,
+				4FA288915DD6512F1D6C20D0 /* [CP] Embed Pods Frameworks */,
+				25F0B39D14899A663FA82E1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBB493601D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactUITests" */;
 			buildPhases = (
+				F2C596AC10EA5B8E3BBE2DE4 /* [CP] Check Pods Manifest.lock */,
 				CBB4934D1D37B59400A0807A /* Sources */,
 				CBB4934E1D37B59400A0807A /* Frameworks */,
 				CBB4934F1D37B59400A0807A /* Resources */,
+				E934D3FDCC6329CB46CCAED1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +241,7 @@
 				TargetAttributes = {
 					CBB493311D37B59300A0807A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4NBQGD9CJH;
 					};
 					CBB493451D37B59300A0807A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -251,13 +300,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		161661A37E8D3F96BB970A1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		25F0B39D14899A663FA82E1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4439C3C1D24D448A02981FFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContact/Pods-OneContact-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FA288915DD6512F1D6C20D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B59BF1CCD580F8F71E16B6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContact/Pods-OneContact-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC2F8694557ABF764CB8B635 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E934D3FDCC6329CB46CCAED1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContactUITests/Pods-OneContactUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2C596AC10EA5B8E3BBE2DE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CBB4932E1D37B59300A0807A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB493381D37B59300A0807A /* ViewController.swift in Sources */,
 				CBB493361D37B59300A0807A /* AppDelegate.swift in Sources */,
+				CBB493641D37B7AC00A0807A /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,28 +571,37 @@
 		};
 		CBB4935B1D37B59400A0807A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 712CBB47BE2ADFA30B39CD70 /* Pods-OneContact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OneContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		CBB4935C1D37B59400A0807A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 542842CE1BC30F03F9971840 /* Pods-OneContact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OneContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		CBB4935E1D37B59400A0807A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F482D3365DC19618103CA6D9 /* Pods-OneContactTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OneContactTests/Info.plist;
@@ -433,6 +614,7 @@
 		};
 		CBB4935F1D37B59400A0807A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5988159DEEEB5D2B2D880006 /* Pods-OneContactTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OneContactTests/Info.plist;
@@ -445,6 +627,7 @@
 		};
 		CBB493611D37B59400A0807A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 795F44ED15B481F54926B5A6 /* Pods-OneContactUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = OneContactUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -456,6 +639,7 @@
 		};
 		CBB493621D37B59400A0807A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F942CB98D71F6007D98A6823 /* Pods-OneContactUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = OneContactUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -484,6 +668,7 @@
 				CBB4935C1D37B59400A0807A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBB4935D1D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +677,7 @@
 				CBB4935F1D37B59400A0807A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBB493601D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +686,7 @@
 				CBB493621D37B59400A0807A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
