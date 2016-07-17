@@ -8,7 +8,7 @@
         <!--Search Table View Controller-->
         <scene sceneID="Ceh-El-Znq">
             <objects>
-                <tableViewController id="fnK-Qg-l6H" customClass="SearchTableViewController" customModule="OneContact" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fnK-Qg-l6H" customClass="SearchTableViewController" customModule="oneContact_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3LY-nv-CVi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:OneContact.xcodeproj">
+      location = "group:/Users/iero/Documents/iOS/OneContact/oneContact.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

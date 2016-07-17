@@ -11,17 +11,11 @@ import Kanna
 
 class SearchTableViewController: UITableViewController, UISearchResultsUpdating, NSXMLParserDelegate
 {
-    let appleProducts = ["Greg Fabre","Yves Le-Stunff","Laurent Castanié","David Campion"]
-    var filteredAppleProducts = [String]()
     var resultSearchController = UISearchController()
-    
     var xmlParser: NSXMLParser!
     
-    struct Item {
-        let name: String
-        let phone: String
-    }
-    var items: [Item]!
+    var personsArray = [PersonItem]()
+    let agil = AgilAPI()
     
     override func viewDidLoad()
     {
@@ -54,13 +48,13 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
     {
         if (self.resultSearchController.active)
         {
-            return self.filteredAppleProducts.count
+            return self.personsArray.count
         }
         else
         {
             // no search
-            //return self.appleProducts.count
-            return 0
+            //return 0
+            return self.personsArray.count
         }
     }
     
@@ -70,14 +64,12 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
         
         if (self.resultSearchController.active)
         {
-            cell!.textLabel?.text = self.filteredAppleProducts[indexPath.row]
-            
+            cell!.textLabel?.text = self.personsArray[indexPath.row].getCompleteName()
             return cell!
         }
         else
         {
-            cell!.textLabel?.text = self.appleProducts[indexPath.row]
-            
+            cell!.textLabel?.text = self.personsArray[indexPath.row].getCompleteName()
             return cell!
         }
     }
@@ -86,83 +78,137 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
     {
         // 3 characters minimum
         if searchController.searchBar.text?.characters.count > 2 {
-            self.filteredAppleProducts.removeAll(keepCapacity: false)
-        
-            let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
-            let array = (self.appleProducts as NSArray).filteredArrayUsingPredicate(searchPredicate)
-            self.filteredAppleProducts = array as! [String]
-        
-            self.tableView.reloadData()
-            parseAgil()
+            print("New search : clean table")
+            self.personsArray.removeAll(keepCapacity: false)
+            parseAgil(searchController.searchBar.text!)
         }
     }
     
-    func parseAgil() {
-        //let url:NSURL = NSURL(string: "https://itunes.apple.com/search?term=jack+johnson&limit=5")!
-        let url:NSURL = NSURL(string: "http://www.iero.org/tmp/agil/original.html")!
-        let session = NSURLSession.sharedSession()
-        
-        let request = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST"
-        //request.HTTPMethod = "GET"
-        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
-        
-        let paramString = "nom=fab"
-        request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        let task = session.dataTaskWithRequest(request) {
-            (
-            let data, let response, let error) in
+    func parseAgilResults(result : String) {
+        if let doc = Kanna.HTML(html: result, encoding: NSUTF8StringEncoding) {
             
-            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
-                print("error")
-                return
-            }
-            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            //print(dataString)
+            var currentSurname = ""
+            var currentName = ""
+            var currentIGG=""
             
-            let html = String(dataString)
-    
-            if let doc = Kanna.HTML(html: html, encoding: NSUTF8StringEncoding) {
+            var currentphoneRIG=""
+            var currentphoneOffice=""
+            var currentphoneMobile=""
+            
+            var currentEntity = [String]()
+            var currentCountryID = ""
+            var currentSite = ""
+            
+            var person: PersonItem
+            
+            for node in doc.xpath("//div/div/div/div[contains(@class,'personfield')] | //div/div/div/div/a[contains(@onclick,'personneSheet')]") {
                 
-                for node in doc.xpath("//div/div/div/div[contains(@class,'personfield')] | //div/div/div/div/a[contains(@onclick,'personneSheet')]") {
-                    
-                    if (node["onclick"] != nil) {
-                        let strnode = node["onclick"]
-                        //print(strnode)
-                        let range = strnode!.startIndex.advancedBy(15) ..< strnode!.startIndex.advancedBy(23)
-                        let igg = strnode!.substringWithRange(range)
-                        print("[IGG]"+igg)
-                    } else {
-                        let s = self.condenseWhitespace(node.text!)
-                        if (!s.isEmpty) {
-                            print("["+node.className!+"]"+s)
-                        }
+                // New people
+                if (node.className == "personfield1") {
+                    // Save person before saveing a new one
+                    if (personsArray.filter{$0.igg == currentIGG}.count == 0 && !currentIGG.isEmpty && !currentName.isEmpty && !currentSurname.isEmpty) {
+                        person = PersonItem(surname: currentSurname, name: currentName, igg: currentIGG, phoneRig: currentphoneRIG, phoneOffice: currentphoneOffice, phoneMobile: currentphoneMobile, entity: currentEntity, countryID: currentCountryID, site: currentSite)
+                        self.personsArray += [person]
                     }
-                
+                    
+                    currentSurname = ""
+                    currentName = ""
+                    currentIGG=""
+                    currentphoneRIG=""
+                    currentphoneOffice=""
+                    currentphoneMobile=""
+                    currentEntity = [String]()
+                    currentCountryID = ""
+                    currentSite = ""
                 }
-            
-                //a[contains(@onClick,'personneSheet')]
-                /*for node in doc.xpath("//div/div/div[contains(@class,'personfield')] | div/a") {
-                    //if (node.className == "personfield1"){
-                    print(node.text)
-                    //print(node["onClick"])
-                    //}
-                    
-                    let s = self.condenseWhitespace(node.text!)
-                    if (!s.isEmpty) {
+                
+                if (node["onclick"] != nil) {
+                    let strnode = node["onclick"]
+                    let range = strnode!.startIndex.advancedBy(15) ..< strnode!.startIndex.advancedBy(23)
+                    currentIGG = strnode!.substringWithRange(range)
+                    //print("[IGG]"+currentIGG)
+                } else {
+                    let strnode = self.cleanAgilEntry(node.text!)
+                    if (!strnode.isEmpty) {
+                        if (node.className == "personfield1") { // Name broker
+                            //print("Break "+strnode)
+                            let sA = strnode.characters.split{$0 == " "}.map(String.init)
+                            for s in sA {
+                                if (self.checkifLowerCaseIncluded(s)) {
+                                    //print("[Name]"+s)
+                                    if (currentName == "") {
+                                        currentName = s;
+                                    } else {
+                                        currentName = currentName+" "+s
+                                    }
+                                } else {
+                                    //print("[SurName]"+s)
+                                    if (currentSurname == "") {
+                                        currentSurname = s;
+                                    } else {
+                                        currentSurname = currentSurname+" "+s
+                                    }
+                                    
+                                }
+                            }
+                        } else if (node.className == "personfield3") { // RIG Phone
+                            currentphoneRIG=strnode
+                        } else if (node.className == "personfield4") { // Office Phone
+                            currentphoneOffice=strnode
+                        } else if (node.className == "personfieldX") { // Mobile Phone
+                            currentphoneMobile=strnode
+                        } else if (node.className == "personfield5") { // Entity
+                            currentEntity = strnode.characters.split{$0 == "/"}.map(String.init)
+                        } else if (node.className == "personfield6") { // country ID
+                            currentCountryID=strnode
+                        } else if (node.className == "personfield7") { // Site
+                            currentSite=strnode
+                         } else {
+                         print("["+node.className!+"]"+strnode)
+                         }
                         
-                        print("["+node.className!+"]"+s)
                     }
-                }*/
+                }
+                
             }
             
         }
-        task.resume()
     }
     
+    func parseAgil(search :String) {
+        
+        print("Looking for surnames containing "+search)
+        agil.searchSurnames(search) {
+            (result: String) in self.parseAgilResults(result)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.personsArray.sortInPlace({ $0.surname < $1.surname })
+                self.tableView.reloadData()
+            })
+        }
+        
+        print("Looking for names containing "+search)
+        agil.searchNames(search) {
+            (result: String) in self.parseAgilResults(result)
+            //self.tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.personsArray.sortInPlace({ $0.surname < $1.surname })
+                self.tableView.reloadData()
+            })
+        }
+        
+    }
     
-    func condenseWhitespace(string: String) -> String {
+    func checkifLowerCaseIncluded(text : String) -> Bool{
+        let lowerLetterRegEx  = ".*[a-z]+.*"
+        let t = NSPredicate(format:"SELF MATCHES %@", lowerLetterRegEx)
+        return t.evaluateWithObject(text)
+    }
+    
+    func capitalLettersParts(s: String) -> [Character] {
+        return s.characters.filter { ("A"..."Z").contains($0) }
+    }
+    
+    func cleanAgilEntry(string: String) -> String {
         let components = string.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         let filtered = components.filter({!$0.isEmpty})
         var result = filtered.joinWithSeparator(" ")
@@ -174,9 +220,9 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
             return ""
         }
         else {
-         return result
+            return result
         }
     }
-
-
-   }
+    
+    
+}
