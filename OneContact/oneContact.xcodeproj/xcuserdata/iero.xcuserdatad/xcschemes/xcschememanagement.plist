@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>OneContact.xcscheme</key>
+		<key>oneContact.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CBB493311D37B59300A0807A</key>
+		<key>CBF6EC371D3BB202006126D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBB493451D37B59300A0807A</key>
+		<key>CBF6EC4B1D3BB203006126D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBB493501D37B59400A0807A</key>
+		<key>CBF6EC561D3BB203006126D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

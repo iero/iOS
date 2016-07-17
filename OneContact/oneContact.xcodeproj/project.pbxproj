@@ -7,259 +7,277 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EB6DF83E4FE06C7AB4F6DC0 /* Pods_OneContact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F841873F7226C0C047E42CF /* Pods_OneContact.framework */; };
-		520AC1C0A1FD17522EE80F0E /* Pods_OneContactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7FD478A4AB83EA1AD4FC1C /* Pods_OneContactTests.framework */; };
-		CB44D9421D38E1EE00B908F9 /* PersonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44D9411D38E1EE00B908F9 /* PersonItem.swift */; };
-		CB44D9441D38FFEC00B908F9 /* AgilApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB44D9431D38FFEC00B908F9 /* AgilApi.swift */; };
-		CBB493361D37B59300A0807A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB493351D37B59300A0807A /* AppDelegate.swift */; };
-		CBB4933B1D37B59300A0807A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB493391D37B59300A0807A /* Main.storyboard */; };
-		CBB4933D1D37B59300A0807A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB4933C1D37B59300A0807A /* Assets.xcassets */; };
-		CBB493401D37B59300A0807A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB4933E1D37B59300A0807A /* LaunchScreen.storyboard */; };
-		CBB4934B1D37B59300A0807A /* OneContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4934A1D37B59300A0807A /* OneContactTests.swift */; };
-		CBB493561D37B59400A0807A /* OneContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB493551D37B59400A0807A /* OneContactUITests.swift */; };
-		CBB493641D37B7AC00A0807A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB493631D37B7AC00A0807A /* SearchTableViewController.swift */; };
-		E930867445ADF2D8A3B200D1 /* Pods_OneContactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E69E9E4796A62633F9801 /* Pods_OneContactUITests.framework */; };
+		287E1B1274484FCAE55BFC34 /* Pods_oneContactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5DD7FDDDEA6B3297B7B591 /* Pods_oneContactTests.framework */; };
+		5EA748A9BF954DD1AE9F2AC8 /* Pods_oneContact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1FA3060C3FB527E5B82BAD /* Pods_oneContact.framework */; };
+		6D2E0117D1814E8699E03A29 /* Pods_oneContactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24765369CECE2B6AFD09FA8 /* Pods_oneContactUITests.framework */; };
+		CB2EEFBA1D3BE41F003827E9 /* Owner.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2EEFB91D3BE41F003827E9 /* Owner.plist */; };
+		CB2EEFBC1D3BE964003827E9 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBB1D3BE964003827E9 /* Plist.swift */; };
+		CB2EEFBE1D3C2287003827E9 /* AgilUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBD1D3C2287003827E9 /* AgilUtils.swift */; };
+		CB2EEFC01D3C22F3003827E9 /* AgilSearchNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */; };
+		CBF6EC3C1D3BB202006126D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */; };
+		CBF6EC3E1D3BB202006126D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC3D1D3BB202006126D7 /* ViewController.swift */; };
+		CBF6EC411D3BB202006126D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF6EC3F1D3BB202006126D7 /* Main.storyboard */; };
+		CBF6EC431D3BB202006126D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF6EC421D3BB202006126D7 /* Assets.xcassets */; };
+		CBF6EC461D3BB202006126D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF6EC441D3BB202006126D7 /* LaunchScreen.storyboard */; };
+		CBF6EC511D3BB203006126D7 /* oneContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC501D3BB203006126D7 /* oneContactTests.swift */; };
+		CBF6EC5C1D3BB203006126D7 /* oneContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC5B1D3BB203006126D7 /* oneContactUITests.swift */; };
+		CBF6EC6A1D3BB5C6006126D7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC691D3BB5C6006126D7 /* MasterViewController.swift */; };
+		CBF6EC6E1D3BB603006126D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC6D1D3BB603006126D7 /* DetailViewController.swift */; };
+		CBF6EC721D3BB859006126D7 /* AgilAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC711D3BB859006126D7 /* AgilAPI.swift */; };
+		CBF6EC741D3BBD33006126D7 /* PersonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC731D3BBD33006126D7 /* PersonItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CBB493471D37B59300A0807A /* PBXContainerItemProxy */ = {
+		CBF6EC4D1D3BB203006126D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CBB4932A1D37B59300A0807A /* Project object */;
+			containerPortal = CBF6EC301D3BB202006126D7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CBB493311D37B59300A0807A;
-			remoteInfo = OneContact;
+			remoteGlobalIDString = CBF6EC371D3BB202006126D7;
+			remoteInfo = oneContact;
 		};
-		CBB493521D37B59400A0807A /* PBXContainerItemProxy */ = {
+		CBF6EC581D3BB203006126D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CBB4932A1D37B59300A0807A /* Project object */;
+			containerPortal = CBF6EC301D3BB202006126D7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CBB493311D37B59300A0807A;
-			remoteInfo = OneContact;
+			remoteGlobalIDString = CBF6EC371D3BB202006126D7;
+			remoteInfo = oneContact;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F841873F7226C0C047E42CF /* Pods_OneContact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneContact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		542842CE1BC30F03F9971840 /* Pods-OneContact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContact.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneContact/Pods-OneContact.release.xcconfig"; sourceTree = "<group>"; };
-		5988159DEEEB5D2B2D880006 /* Pods-OneContactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests.release.xcconfig"; sourceTree = "<group>"; };
-		5C7FD478A4AB83EA1AD4FC1C /* Pods_OneContactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneContactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		712CBB47BE2ADFA30B39CD70 /* Pods-OneContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneContact/Pods-OneContact.debug.xcconfig"; sourceTree = "<group>"; };
-		795F44ED15B481F54926B5A6 /* Pods-OneContactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactUITests/Pods-OneContactUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		832E69E9E4796A62633F9801 /* Pods_OneContactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneContactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB44D9411D38E1EE00B908F9 /* PersonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonItem.swift; sourceTree = "<group>"; };
-		CB44D9431D38FFEC00B908F9 /* AgilApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilApi.swift; sourceTree = "<group>"; };
-		CBB493321D37B59300A0807A /* oneContact.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneContact.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBB493351D37B59300A0807A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBB4933A1D37B59300A0807A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CBB4933C1D37B59300A0807A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CBB4933F1D37B59300A0807A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CBB493411D37B59300A0807A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBB493461D37B59300A0807A /* oneContact.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneContact.temp_caseinsensitive_rename.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBB4934A1D37B59300A0807A /* OneContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactTests.swift; sourceTree = "<group>"; };
-		CBB4934C1D37B59300A0807A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBB493511D37B59400A0807A /* oneContact.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneContact.temp_caseinsensitive_rename.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBB493551D37B59400A0807A /* OneContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactUITests.swift; sourceTree = "<group>"; };
-		CBB493571D37B59400A0807A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBB493631D37B7AC00A0807A /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		F482D3365DC19618103CA6D9 /* Pods-OneContactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F942CB98D71F6007D98A6823 /* Pods-OneContactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneContactUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneContactUITests/Pods-OneContactUITests.release.xcconfig"; sourceTree = "<group>"; };
+		02D3D02916EFD89AB2B41181 /* Pods-oneContactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContactUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneContactUITests/Pods-oneContactUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F1FA3060C3FB527E5B82BAD /* Pods_oneContact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneContact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		916D52A6893CBC8D98C07022 /* Pods-oneContactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContactUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneContactUITests/Pods-oneContactUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9CDC75E7FDF30E740BEDBFF8 /* Pods-oneContact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContact.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneContact/Pods-oneContact.release.xcconfig"; sourceTree = "<group>"; };
+		9E5DD7FDDDEA6B3297B7B591 /* Pods_oneContactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneContactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9AD68C668DDA5D3B61F1E42 /* Pods-oneContactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContactTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-oneContactTests/Pods-oneContactTests.release.xcconfig"; sourceTree = "<group>"; };
+		B34A90E13D31E014FEDC8B37 /* Pods-oneContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneContact/Pods-oneContact.debug.xcconfig"; sourceTree = "<group>"; };
+		CB2EEFB91D3BE41F003827E9 /* Owner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Owner.plist; sourceTree = "<group>"; };
+		CB2EEFBB1D3BE964003827E9 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		CB2EEFBD1D3C2287003827E9 /* AgilUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilUtils.swift; sourceTree = "<group>"; };
+		CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilSearchNames.swift; sourceTree = "<group>"; };
+		CBF6EC381D3BB202006126D7 /* oneContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBF6EC3D1D3BB202006126D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBF6EC401D3BB202006126D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBF6EC421D3BB202006126D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBF6EC451D3BB202006126D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBF6EC471D3BB202006126D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF6EC4C1D3BB203006126D7 /* oneContactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneContactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF6EC501D3BB203006126D7 /* oneContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneContactTests.swift; sourceTree = "<group>"; };
+		CBF6EC521D3BB203006126D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF6EC571D3BB203006126D7 /* oneContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF6EC5B1D3BB203006126D7 /* oneContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneContactUITests.swift; sourceTree = "<group>"; };
+		CBF6EC5D1D3BB203006126D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF6EC691D3BB5C6006126D7 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		CBF6EC6D1D3BB603006126D7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CBF6EC711D3BB859006126D7 /* AgilAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilAPI.swift; sourceTree = "<group>"; };
+		CBF6EC731D3BBD33006126D7 /* PersonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonItem.swift; sourceTree = "<group>"; };
+		D0451F5DA1A1B06B87D6DA21 /* Pods-oneContactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneContactTests/Pods-oneContactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D24765369CECE2B6AFD09FA8 /* Pods_oneContactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneContactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CBB4932F1D37B59300A0807A /* Frameworks */ = {
+		CBF6EC351D3BB202006126D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EB6DF83E4FE06C7AB4F6DC0 /* Pods_OneContact.framework in Frameworks */,
+				5EA748A9BF954DD1AE9F2AC8 /* Pods_oneContact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBB493431D37B59300A0807A /* Frameworks */ = {
+		CBF6EC491D3BB203006126D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				520AC1C0A1FD17522EE80F0E /* Pods_OneContactTests.framework in Frameworks */,
+				287E1B1274484FCAE55BFC34 /* Pods_oneContactTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBB4934E1D37B59400A0807A /* Frameworks */ = {
+		CBF6EC541D3BB203006126D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E930867445ADF2D8A3B200D1 /* Pods_OneContactUITests.framework in Frameworks */,
+				6D2E0117D1814E8699E03A29 /* Pods_oneContactUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A7237BF7C8E78C5BF989FD9 /* Pods */ = {
+		3A7E8F95567F6C5BF2676EE2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				712CBB47BE2ADFA30B39CD70 /* Pods-OneContact.debug.xcconfig */,
-				542842CE1BC30F03F9971840 /* Pods-OneContact.release.xcconfig */,
-				F482D3365DC19618103CA6D9 /* Pods-OneContactTests.debug.xcconfig */,
-				5988159DEEEB5D2B2D880006 /* Pods-OneContactTests.release.xcconfig */,
-				795F44ED15B481F54926B5A6 /* Pods-OneContactUITests.debug.xcconfig */,
-				F942CB98D71F6007D98A6823 /* Pods-OneContactUITests.release.xcconfig */,
+				B34A90E13D31E014FEDC8B37 /* Pods-oneContact.debug.xcconfig */,
+				9CDC75E7FDF30E740BEDBFF8 /* Pods-oneContact.release.xcconfig */,
+				D0451F5DA1A1B06B87D6DA21 /* Pods-oneContactTests.debug.xcconfig */,
+				A9AD68C668DDA5D3B61F1E42 /* Pods-oneContactTests.release.xcconfig */,
+				02D3D02916EFD89AB2B41181 /* Pods-oneContactUITests.debug.xcconfig */,
+				916D52A6893CBC8D98C07022 /* Pods-oneContactUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		369EF6829D5E80CCB3B65FBD /* Frameworks */ = {
+		5C53682018A9C9E7CF742235 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F841873F7226C0C047E42CF /* Pods_OneContact.framework */,
-				5C7FD478A4AB83EA1AD4FC1C /* Pods_OneContactTests.framework */,
-				832E69E9E4796A62633F9801 /* Pods_OneContactUITests.framework */,
+				7F1FA3060C3FB527E5B82BAD /* Pods_oneContact.framework */,
+				9E5DD7FDDDEA6B3297B7B591 /* Pods_oneContactTests.framework */,
+				D24765369CECE2B6AFD09FA8 /* Pods_oneContactUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CBB493291D37B59300A0807A = {
+		CBF6EC2F1D3BB202006126D7 = {
 			isa = PBXGroup;
 			children = (
-				CBB493341D37B59300A0807A /* OneContact */,
-				CBB493491D37B59300A0807A /* OneContactTests */,
-				CBB493541D37B59400A0807A /* OneContactUITests */,
-				CBB493331D37B59300A0807A /* Products */,
-				1A7237BF7C8E78C5BF989FD9 /* Pods */,
-				369EF6829D5E80CCB3B65FBD /* Frameworks */,
+				CBF6EC3A1D3BB202006126D7 /* oneContact */,
+				CBF6EC4F1D3BB203006126D7 /* oneContactTests */,
+				CBF6EC5A1D3BB203006126D7 /* oneContactUITests */,
+				CBF6EC391D3BB202006126D7 /* Products */,
+				3A7E8F95567F6C5BF2676EE2 /* Pods */,
+				5C53682018A9C9E7CF742235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		CBB493331D37B59300A0807A /* Products */ = {
+		CBF6EC391D3BB202006126D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBB493321D37B59300A0807A /* oneContact.temp_caseinsensitive_rename.app */,
-				CBB493461D37B59300A0807A /* oneContact.temp_caseinsensitive_rename.xctest */,
-				CBB493511D37B59400A0807A /* oneContact.temp_caseinsensitive_rename.xctest */,
+				CBF6EC381D3BB202006126D7 /* oneContact.app */,
+				CBF6EC4C1D3BB203006126D7 /* oneContactTests.xctest */,
+				CBF6EC571D3BB203006126D7 /* oneContactUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CBB493341D37B59300A0807A /* OneContact */ = {
+		CBF6EC3A1D3BB202006126D7 /* oneContact */ = {
 			isa = PBXGroup;
 			children = (
-				CBB493351D37B59300A0807A /* AppDelegate.swift */,
-				CBB493391D37B59300A0807A /* Main.storyboard */,
-				CBB493631D37B7AC00A0807A /* SearchTableViewController.swift */,
-				CB44D9431D38FFEC00B908F9 /* AgilApi.swift */,
-				CB44D9411D38E1EE00B908F9 /* PersonItem.swift */,
-				CBB4933C1D37B59300A0807A /* Assets.xcassets */,
-				CBB4933E1D37B59300A0807A /* LaunchScreen.storyboard */,
-				CBB493411D37B59300A0807A /* Info.plist */,
+				CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */,
+				CBF6EC3D1D3BB202006126D7 /* ViewController.swift */,
+				CBF6EC3F1D3BB202006126D7 /* Main.storyboard */,
+				CBF6EC421D3BB202006126D7 /* Assets.xcassets */,
+				CBF6EC441D3BB202006126D7 /* LaunchScreen.storyboard */,
+				CBF6EC471D3BB202006126D7 /* Info.plist */,
+				CBF6EC691D3BB5C6006126D7 /* MasterViewController.swift */,
+				CBF6EC6D1D3BB603006126D7 /* DetailViewController.swift */,
+				CBF6EC711D3BB859006126D7 /* AgilAPI.swift */,
+				CBF6EC731D3BBD33006126D7 /* PersonItem.swift */,
+				CB2EEFB91D3BE41F003827E9 /* Owner.plist */,
+				CB2EEFBB1D3BE964003827E9 /* Plist.swift */,
+				CB2EEFBD1D3C2287003827E9 /* AgilUtils.swift */,
+				CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */,
 			);
-			path = OneContact;
+			path = oneContact;
 			sourceTree = "<group>";
 		};
-		CBB493491D37B59300A0807A /* OneContactTests */ = {
+		CBF6EC4F1D3BB203006126D7 /* oneContactTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBB4934A1D37B59300A0807A /* OneContactTests.swift */,
-				CBB4934C1D37B59300A0807A /* Info.plist */,
+				CBF6EC501D3BB203006126D7 /* oneContactTests.swift */,
+				CBF6EC521D3BB203006126D7 /* Info.plist */,
 			);
-			path = OneContactTests;
+			path = oneContactTests;
 			sourceTree = "<group>";
 		};
-		CBB493541D37B59400A0807A /* OneContactUITests */ = {
+		CBF6EC5A1D3BB203006126D7 /* oneContactUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CBB493551D37B59400A0807A /* OneContactUITests.swift */,
-				CBB493571D37B59400A0807A /* Info.plist */,
+				CBF6EC5B1D3BB203006126D7 /* oneContactUITests.swift */,
+				CBF6EC5D1D3BB203006126D7 /* Info.plist */,
 			);
-			path = OneContactUITests;
+			path = oneContactUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CBB493311D37B59300A0807A /* OneContact */ = {
+		CBF6EC371D3BB202006126D7 /* oneContact */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBB4935A1D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContact" */;
+			buildConfigurationList = CBF6EC601D3BB203006126D7 /* Build configuration list for PBXNativeTarget "oneContact" */;
 			buildPhases = (
-				161661A37E8D3F96BB970A1B /* [CP] Check Pods Manifest.lock */,
-				CBB4932E1D37B59300A0807A /* Sources */,
-				CBB4932F1D37B59300A0807A /* Frameworks */,
-				CBB493301D37B59300A0807A /* Resources */,
-				4439C3C1D24D448A02981FFD /* [CP] Embed Pods Frameworks */,
-				7B59BF1CCD580F8F71E16B6D /* [CP] Copy Pods Resources */,
+				58F35EF0ACDDD53128F87352 /* [CP] Check Pods Manifest.lock */,
+				CBF6EC341D3BB202006126D7 /* Sources */,
+				CBF6EC351D3BB202006126D7 /* Frameworks */,
+				CBF6EC361D3BB202006126D7 /* Resources */,
+				BD60ACF7C07E063C80335E7C /* [CP] Embed Pods Frameworks */,
+				25EF328891CFBC4B028A3C45 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OneContact;
-			productName = OneContact;
-			productReference = CBB493321D37B59300A0807A /* oneContact.temp_caseinsensitive_rename.app */;
+			name = oneContact;
+			productName = oneContact;
+			productReference = CBF6EC381D3BB202006126D7 /* oneContact.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CBB493451D37B59300A0807A /* OneContactTests */ = {
+		CBF6EC4B1D3BB203006126D7 /* oneContactTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBB4935D1D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactTests" */;
+			buildConfigurationList = CBF6EC631D3BB203006126D7 /* Build configuration list for PBXNativeTarget "oneContactTests" */;
 			buildPhases = (
-				BC2F8694557ABF764CB8B635 /* [CP] Check Pods Manifest.lock */,
-				CBB493421D37B59300A0807A /* Sources */,
-				CBB493431D37B59300A0807A /* Frameworks */,
-				CBB493441D37B59300A0807A /* Resources */,
-				4FA288915DD6512F1D6C20D0 /* [CP] Embed Pods Frameworks */,
-				25F0B39D14899A663FA82E1B /* [CP] Copy Pods Resources */,
+				0155EF31C1B2B00F3A213C03 /* [CP] Check Pods Manifest.lock */,
+				CBF6EC481D3BB203006126D7 /* Sources */,
+				CBF6EC491D3BB203006126D7 /* Frameworks */,
+				CBF6EC4A1D3BB203006126D7 /* Resources */,
+				9A48BD91F008ACB1602D3C06 /* [CP] Embed Pods Frameworks */,
+				F711236A95340D3AF0EB8629 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CBB493481D37B59300A0807A /* PBXTargetDependency */,
+				CBF6EC4E1D3BB203006126D7 /* PBXTargetDependency */,
 			);
-			name = OneContactTests;
-			productName = OneContactTests;
-			productReference = CBB493461D37B59300A0807A /* oneContact.temp_caseinsensitive_rename.xctest */;
+			name = oneContactTests;
+			productName = oneContactTests;
+			productReference = CBF6EC4C1D3BB203006126D7 /* oneContactTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CBB493501D37B59400A0807A /* OneContactUITests */ = {
+		CBF6EC561D3BB203006126D7 /* oneContactUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBB493601D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactUITests" */;
+			buildConfigurationList = CBF6EC661D3BB203006126D7 /* Build configuration list for PBXNativeTarget "oneContactUITests" */;
 			buildPhases = (
-				F2C596AC10EA5B8E3BBE2DE4 /* [CP] Check Pods Manifest.lock */,
-				CBB4934D1D37B59400A0807A /* Sources */,
-				CBB4934E1D37B59400A0807A /* Frameworks */,
-				CBB4934F1D37B59400A0807A /* Resources */,
-				E934D3FDCC6329CB46CCAED1 /* [CP] Copy Pods Resources */,
+				CC97D2E07AC2A674940DA9E0 /* [CP] Check Pods Manifest.lock */,
+				CBF6EC531D3BB203006126D7 /* Sources */,
+				CBF6EC541D3BB203006126D7 /* Frameworks */,
+				CBF6EC551D3BB203006126D7 /* Resources */,
+				C81ABA5E92AD13FEDD1CB587 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CBB493531D37B59400A0807A /* PBXTargetDependency */,
+				CBF6EC591D3BB203006126D7 /* PBXTargetDependency */,
 			);
-			name = OneContactUITests;
-			productName = OneContactUITests;
-			productReference = CBB493511D37B59400A0807A /* oneContact.temp_caseinsensitive_rename.xctest */;
+			name = oneContactUITests;
+			productName = oneContactUITests;
+			productReference = CBF6EC571D3BB203006126D7 /* oneContactUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CBB4932A1D37B59300A0807A /* Project object */ = {
+		CBF6EC301D3BB202006126D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Total;
 				TargetAttributes = {
-					CBB493311D37B59300A0807A = {
+					CBF6EC371D3BB202006126D7 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 4NBQGD9CJH;
 					};
-					CBB493451D37B59300A0807A = {
+					CBF6EC4B1D3BB203006126D7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = CBB493311D37B59300A0807A;
+						TestTargetID = CBF6EC371D3BB202006126D7;
 					};
-					CBB493501D37B59400A0807A = {
+					CBF6EC561D3BB203006126D7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = CBB493311D37B59300A0807A;
+						TestTargetID = CBF6EC371D3BB202006126D7;
 					};
 				};
 			};
-			buildConfigurationList = CBB4932D1D37B59300A0807A /* Build configuration list for PBXProject "oneContact" */;
+			buildConfigurationList = CBF6EC331D3BB202006126D7 /* Build configuration list for PBXProject "oneContact" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -267,37 +285,38 @@
 				en,
 				Base,
 			);
-			mainGroup = CBB493291D37B59300A0807A;
-			productRefGroup = CBB493331D37B59300A0807A /* Products */;
+			mainGroup = CBF6EC2F1D3BB202006126D7;
+			productRefGroup = CBF6EC391D3BB202006126D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBB493311D37B59300A0807A /* OneContact */,
-				CBB493451D37B59300A0807A /* OneContactTests */,
-				CBB493501D37B59400A0807A /* OneContactUITests */,
+				CBF6EC371D3BB202006126D7 /* oneContact */,
+				CBF6EC4B1D3BB203006126D7 /* oneContactTests */,
+				CBF6EC561D3BB203006126D7 /* oneContactUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CBB493301D37B59300A0807A /* Resources */ = {
+		CBF6EC361D3BB202006126D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB493401D37B59300A0807A /* LaunchScreen.storyboard in Resources */,
-				CBB4933D1D37B59300A0807A /* Assets.xcassets in Resources */,
-				CBB4933B1D37B59300A0807A /* Main.storyboard in Resources */,
+				CB2EEFBA1D3BE41F003827E9 /* Owner.plist in Resources */,
+				CBF6EC461D3BB202006126D7 /* LaunchScreen.storyboard in Resources */,
+				CBF6EC431D3BB202006126D7 /* Assets.xcassets in Resources */,
+				CBF6EC411D3BB202006126D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBB493441D37B59300A0807A /* Resources */ = {
+		CBF6EC4A1D3BB203006126D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBB4934F1D37B59400A0807A /* Resources */ = {
+		CBF6EC551D3BB203006126D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,7 +326,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		161661A37E8D3F96BB970A1B /* [CP] Check Pods Manifest.lock */ = {
+		0155EF31C1B2B00F3A213C03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,7 +341,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		25F0B39D14899A663FA82E1B /* [CP] Copy Pods Resources */ = {
+		25EF328891CFBC4B028A3C45 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,10 +353,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-oneContact/Pods-oneContact-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4439C3C1D24D448A02981FFD /* [CP] Embed Pods Frameworks */ = {
+		58F35EF0ACDDD53128F87352 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A48BD91F008ACB1602D3C06 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,10 +383,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContact/Pods-OneContact-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-oneContactTests/Pods-oneContactTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4FA288915DD6512F1D6C20D0 /* [CP] Embed Pods Frameworks */ = {
+		BD60ACF7C07E063C80335E7C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,10 +398,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContactTests/Pods-OneContactTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-oneContact/Pods-oneContact-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B59BF1CCD580F8F71E16B6D /* [CP] Copy Pods Resources */ = {
+		C81ABA5E92AD13FEDD1CB587 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,10 +413,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContact/Pods-OneContact-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-oneContactUITests/Pods-oneContactUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC2F8694557ABF764CB8B635 /* [CP] Check Pods Manifest.lock */ = {
+		CC97D2E07AC2A674940DA9E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,7 +431,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E934D3FDCC6329CB46CCAED1 /* [CP] Copy Pods Resources */ = {
+		F711236A95340D3AF0EB8629 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -409,82 +443,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneContactUITests/Pods-OneContactUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2C596AC10EA5B8E3BBE2DE4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-oneContactTests/Pods-oneContactTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CBB4932E1D37B59300A0807A /* Sources */ = {
+		CBF6EC341D3BB202006126D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB493361D37B59300A0807A /* AppDelegate.swift in Sources */,
-				CB44D9421D38E1EE00B908F9 /* PersonItem.swift in Sources */,
-				CBB493641D37B7AC00A0807A /* SearchTableViewController.swift in Sources */,
-				CB44D9441D38FFEC00B908F9 /* AgilApi.swift in Sources */,
+				CB2EEFC01D3C22F3003827E9 /* AgilSearchNames.swift in Sources */,
+				CB2EEFBE1D3C2287003827E9 /* AgilUtils.swift in Sources */,
+				CB2EEFBC1D3BE964003827E9 /* Plist.swift in Sources */,
+				CBF6EC3E1D3BB202006126D7 /* ViewController.swift in Sources */,
+				CBF6EC741D3BBD33006126D7 /* PersonItem.swift in Sources */,
+				CBF6EC3C1D3BB202006126D7 /* AppDelegate.swift in Sources */,
+				CBF6EC6A1D3BB5C6006126D7 /* MasterViewController.swift in Sources */,
+				CBF6EC721D3BB859006126D7 /* AgilAPI.swift in Sources */,
+				CBF6EC6E1D3BB603006126D7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBB493421D37B59300A0807A /* Sources */ = {
+		CBF6EC481D3BB203006126D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB4934B1D37B59300A0807A /* OneContactTests.swift in Sources */,
+				CBF6EC511D3BB203006126D7 /* oneContactTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBB4934D1D37B59400A0807A /* Sources */ = {
+		CBF6EC531D3BB203006126D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB493561D37B59400A0807A /* OneContactUITests.swift in Sources */,
+				CBF6EC5C1D3BB203006126D7 /* oneContactUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CBB493481D37B59300A0807A /* PBXTargetDependency */ = {
+		CBF6EC4E1D3BB203006126D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CBB493311D37B59300A0807A /* OneContact */;
-			targetProxy = CBB493471D37B59300A0807A /* PBXContainerItemProxy */;
+			target = CBF6EC371D3BB202006126D7 /* oneContact */;
+			targetProxy = CBF6EC4D1D3BB203006126D7 /* PBXContainerItemProxy */;
 		};
-		CBB493531D37B59400A0807A /* PBXTargetDependency */ = {
+		CBF6EC591D3BB203006126D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CBB493311D37B59300A0807A /* OneContact */;
-			targetProxy = CBB493521D37B59400A0807A /* PBXContainerItemProxy */;
+			target = CBF6EC371D3BB202006126D7 /* oneContact */;
+			targetProxy = CBF6EC581D3BB203006126D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CBB493391D37B59300A0807A /* Main.storyboard */ = {
+		CBF6EC3F1D3BB202006126D7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CBB4933A1D37B59300A0807A /* Base */,
+				CBF6EC401D3BB202006126D7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CBB4933E1D37B59300A0807A /* LaunchScreen.storyboard */ = {
+		CBF6EC441D3BB202006126D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CBB4933F1D37B59300A0807A /* Base */,
+				CBF6EC451D3BB202006126D7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -492,7 +516,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CBB493581D37B59400A0807A /* Debug */ = {
+		CBF6EC5E1D3BB203006126D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -538,7 +562,7 @@
 			};
 			name = Debug;
 		};
-		CBB493591D37B59400A0807A /* Release */ = {
+		CBF6EC5F1D3BB203006126D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -577,126 +601,126 @@
 			};
 			name = Release;
 		};
-		CBB4935B1D37B59400A0807A /* Debug */ = {
+		CBF6EC611D3BB203006126D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 712CBB47BE2ADFA30B39CD70 /* Pods-OneContact.debug.xcconfig */;
+			baseConfigurationReference = B34A90E13D31E014FEDC8B37 /* Pods-oneContact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = OneContact/Info.plist;
+				INFOPLIST_FILE = oneContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContact;
-				PRODUCT_NAME = oneContact.temp_caseinsensitive_rename;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iero.oneContact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		CBB4935C1D37B59400A0807A /* Release */ = {
+		CBF6EC621D3BB203006126D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 542842CE1BC30F03F9971840 /* Pods-OneContact.release.xcconfig */;
+			baseConfigurationReference = 9CDC75E7FDF30E740BEDBFF8 /* Pods-oneContact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = OneContact/Info.plist;
+				INFOPLIST_FILE = oneContact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContact;
-				PRODUCT_NAME = oneContact.temp_caseinsensitive_rename;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iero.oneContact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
-		CBB4935E1D37B59400A0807A /* Debug */ = {
+		CBF6EC641D3BB203006126D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F482D3365DC19618103CA6D9 /* Pods-OneContactTests.debug.xcconfig */;
+			baseConfigurationReference = D0451F5DA1A1B06B87D6DA21 /* Pods-oneContactTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OneContactTests/Info.plist;
+				INFOPLIST_FILE = oneContactTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContactTests;
-				PRODUCT_NAME = oneContact.temp_caseinsensitive_rename;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oneContact.temp_caseinsensitive_rename.app/oneContact.temp_caseinsensitive_rename";
+				PRODUCT_BUNDLE_IDENTIFIER = com.total.oneContactTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oneContact.app/oneContact";
 			};
 			name = Debug;
 		};
-		CBB4935F1D37B59400A0807A /* Release */ = {
+		CBF6EC651D3BB203006126D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5988159DEEEB5D2B2D880006 /* Pods-OneContactTests.release.xcconfig */;
+			baseConfigurationReference = A9AD68C668DDA5D3B61F1E42 /* Pods-oneContactTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OneContactTests/Info.plist;
+				INFOPLIST_FILE = oneContactTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContactTests;
-				PRODUCT_NAME = oneContact.temp_caseinsensitive_rename;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oneContact.temp_caseinsensitive_rename.app/oneContact.temp_caseinsensitive_rename";
+				PRODUCT_BUNDLE_IDENTIFIER = com.total.oneContactTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oneContact.app/oneContact";
 			};
 			name = Release;
 		};
-		CBB493611D37B59400A0807A /* Debug */ = {
+		CBF6EC671D3BB203006126D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 795F44ED15B481F54926B5A6 /* Pods-OneContactUITests.debug.xcconfig */;
+			baseConfigurationReference = 02D3D02916EFD89AB2B41181 /* Pods-oneContactUITests.debug.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = OneContactUITests/Info.plist;
+				INFOPLIST_FILE = oneContactUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContactUITests;
-				PRODUCT_NAME = oneContact.temp_caseinsensitive_rename;
-				TEST_TARGET_NAME = OneContact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.total.oneContactUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = oneContact;
 			};
 			name = Debug;
 		};
-		CBB493621D37B59400A0807A /* Release */ = {
+		CBF6EC681D3BB203006126D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F942CB98D71F6007D98A6823 /* Pods-OneContactUITests.release.xcconfig */;
+			baseConfigurationReference = 916D52A6893CBC8D98C07022 /* Pods-oneContactUITests.release.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = OneContactUITests/Info.plist;
+				INFOPLIST_FILE = oneContactUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.total.OneContactUITests;
-				PRODUCT_NAME = oneContact.temp_caseinsensitive_rename;
-				TEST_TARGET_NAME = OneContact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.total.oneContactUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = oneContact;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CBB4932D1D37B59300A0807A /* Build configuration list for PBXProject "oneContact" */ = {
+		CBF6EC331D3BB202006126D7 /* Build configuration list for PBXProject "oneContact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CBB493581D37B59400A0807A /* Debug */,
-				CBB493591D37B59400A0807A /* Release */,
+				CBF6EC5E1D3BB203006126D7 /* Debug */,
+				CBF6EC5F1D3BB203006126D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBB4935A1D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContact" */ = {
+		CBF6EC601D3BB203006126D7 /* Build configuration list for PBXNativeTarget "oneContact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CBB4935B1D37B59400A0807A /* Debug */,
-				CBB4935C1D37B59400A0807A /* Release */,
+				CBF6EC611D3BB203006126D7 /* Debug */,
+				CBF6EC621D3BB203006126D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBB4935D1D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactTests" */ = {
+		CBF6EC631D3BB203006126D7 /* Build configuration list for PBXNativeTarget "oneContactTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CBB4935E1D37B59400A0807A /* Debug */,
-				CBB4935F1D37B59400A0807A /* Release */,
+				CBF6EC641D3BB203006126D7 /* Debug */,
+				CBF6EC651D3BB203006126D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBB493601D37B59400A0807A /* Build configuration list for PBXNativeTarget "OneContactUITests" */ = {
+		CBF6EC661D3BB203006126D7 /* Build configuration list for PBXNativeTarget "oneContactUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CBB493611D37B59400A0807A /* Debug */,
-				CBB493621D37B59400A0807A /* Release */,
+				CBF6EC671D3BB203006126D7 /* Debug */,
+				CBF6EC681D3BB203006126D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CBB4932A1D37B59300A0807A /* Project object */;
+	rootObject = CBF6EC301D3BB202006126D7 /* Project object */;
 }

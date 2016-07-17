@@ -1,19 +1,19 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'OneContact' do
+target 'oneContact' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for OneContact
+  # Pods for oneContact
   pod 'Kanna', '~> 1.1.0'
 
-  target 'OneContactTests' do
+  target 'oneContactTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'OneContactUITests' do
+  target 'oneContactUITests' do
     inherit! :search_paths
     # Pods for testing
   end

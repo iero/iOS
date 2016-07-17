@@ -1,5 +1,5 @@
-framework module Pods_OneContactUITests {
-  umbrella header "Pods-OneContactUITests-umbrella.h"
+framework module Pods_oneContactUITests {
+  umbrella header "Pods-oneContactUITests-umbrella.h"
 
   export *
   module * { export * }

@@ -1,15 +1,15 @@
 //
-//  OneContactTests.swift
-//  OneContactTests
+//  oneContactTests.swift
+//  oneContactTests
 //
-//  Created by iero on 14/07/2016.
+//  Created by iero on 17/07/2016.
 //  Copyright © 2016 Total. All rights reserved.
 //
 
 import XCTest
-@testable import OneContact
+@testable import oneContact
 
-class OneContactTests: XCTestCase {
+class oneContactTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

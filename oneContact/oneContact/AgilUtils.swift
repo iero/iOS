@@ -1,90 +1,18 @@
 //
-//  SearchTableViewController.swift
-//  OneContact
+//  AgilUtils.swift
+//  oneContact
 //
-//  Created by iero on 14/07/2016.
+//  Created by iero on 17/07/2016.
 //  Copyright © 2016 Total. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Kanna
 
-class SearchTableViewController: UITableViewController, UISearchResultsUpdating, NSXMLParserDelegate
-{
-    var resultSearchController = UISearchController()
-    var xmlParser: NSXMLParser!
-    
-    var personsArray = [PersonItem]()
-    let agil = AgilAPI()
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
+class AgilUtils {
+    func parseAgilResults(result : String) -> [PersonItem] {
+        var personsArray = [PersonItem]()
         
-        self.resultSearchController = UISearchController(searchResultsController: nil)
-        self.resultSearchController.searchResultsUpdater = self
-        self.resultSearchController.dimsBackgroundDuringPresentation = false
-        self.resultSearchController.searchBar.sizeToFit()
-        
-        self.tableView.tableHeaderView = self.resultSearchController.searchBar
-        
-        self.tableView.reloadData()
-    }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - Table view data source
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
-    {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        if (self.resultSearchController.active)
-        {
-            return self.personsArray.count
-        }
-        else
-        {
-            // no search
-            //return 0
-            return self.personsArray.count
-        }
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell?
-        
-        if (self.resultSearchController.active)
-        {
-            cell!.textLabel?.text = self.personsArray[indexPath.row].getCompleteName()
-            return cell!
-        }
-        else
-        {
-            cell!.textLabel?.text = self.personsArray[indexPath.row].getCompleteName()
-            return cell!
-        }
-    }
-    
-    func updateSearchResultsForSearchController(searchController: UISearchController)
-    {
-        // 3 characters minimum
-        if searchController.searchBar.text?.characters.count > 2 {
-            print("New search : clean table")
-            self.personsArray.removeAll(keepCapacity: false)
-            parseAgil(searchController.searchBar.text!)
-        }
-    }
-    
-    func parseAgilResults(result : String) {
         if let doc = Kanna.HTML(html: result, encoding: NSUTF8StringEncoding) {
             
             var currentSurname = ""
@@ -101,6 +29,10 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
             
             var person: PersonItem
             
+            for node in doc.xpath("//div[contains(@class,'noResult')]") {
+                print(node.content)
+            }
+            
             for node in doc.xpath("//div/div/div/div[contains(@class,'personfield')] | //div/div/div/div/a[contains(@onclick,'personneSheet')]") {
                 
                 // New people
@@ -108,7 +40,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
                     // Save person before saveing a new one
                     if (personsArray.filter{$0.igg == currentIGG}.count == 0 && !currentIGG.isEmpty && !currentName.isEmpty && !currentSurname.isEmpty) {
                         person = PersonItem(surname: currentSurname, name: currentName, igg: currentIGG, phoneRig: currentphoneRIG, phoneOffice: currentphoneOffice, phoneMobile: currentphoneMobile, entity: currentEntity, countryID: currentCountryID, site: currentSite)
-                        self.personsArray += [person]
+                        personsArray += [person]
                     }
                     
                     currentSurname = ""
@@ -128,13 +60,13 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
                     currentIGG = strnode!.substringWithRange(range)
                     //print("[IGG]"+currentIGG)
                 } else {
-                    let strnode = self.cleanAgilEntry(node.text!)
+                    let strnode = cleanAgilEntry(node.text!)
                     if (!strnode.isEmpty) {
                         if (node.className == "personfield1") { // Name broker
                             //print("Break "+strnode)
                             let sA = strnode.characters.split{$0 == " "}.map(String.init)
                             for s in sA {
-                                if (self.checkifLowerCaseIncluded(s)) {
+                                if (checkifLowerCaseIncluded(s)) {
                                     //print("[Name]"+s)
                                     if (currentName == "") {
                                         currentName = s;
@@ -163,9 +95,9 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
                             currentCountryID=strnode
                         } else if (node.className == "personfield7") { // Site
                             currentSite=strnode
-                         } else {
-                         print("["+node.className!+"]"+strnode)
-                         }
+                        } else {
+                            print("["+node.className!+"]"+strnode)
+                        }
                         
                     }
                 }
@@ -173,30 +105,9 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
             }
             
         }
+        return personsArray
     }
     
-    func parseAgil(search :String) {
-        
-        print("Looking for surnames containing "+search)
-        agil.searchSurnames(search) {
-            (result: String) in self.parseAgilResults(result)
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.personsArray.sortInPlace({ $0.surname < $1.surname })
-                self.tableView.reloadData()
-            })
-        }
-        
-        print("Looking for names containing "+search)
-        agil.searchNames(search) {
-            (result: String) in self.parseAgilResults(result)
-            //self.tableView.reloadData()
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.personsArray.sortInPlace({ $0.surname < $1.surname })
-                self.tableView.reloadData()
-            })
-        }
-        
-    }
     
     func checkifLowerCaseIncluded(text : String) -> Bool{
         let lowerLetterRegEx  = ".*[a-z]+.*"
@@ -222,7 +133,11 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating,
         else {
             return result
         }
+        
+        func setCookies(response:NSURLResponse) {
+            let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookiesForURL(response.URL!)
+            print(cookies)
+        }
     }
-    
     
 }

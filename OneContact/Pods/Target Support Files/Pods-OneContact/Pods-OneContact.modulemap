@@ -1,5 +1,5 @@
-framework module Pods_OneContact {
-  umbrella header "Pods-OneContact-umbrella.h"
+framework module Pods_oneContact {
+  umbrella header "Pods-oneContact-umbrella.h"
 
   export *
   module * { export * }

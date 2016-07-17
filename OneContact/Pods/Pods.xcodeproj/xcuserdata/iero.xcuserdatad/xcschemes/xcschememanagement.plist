@@ -9,17 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-OneContact.xcscheme</key>
+		<key>Pods-oneContact.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-OneContactTests.xcscheme</key>
+		<key>Pods-oneContactTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-OneContactUITests.xcscheme</key>
+		<key>Pods-oneContactUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>160A7F40ACCD7BEE6216E6BDA8909A67</key>
+		<key>3377C52E8F5BC96F34C2C265121A8824</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>628567C4E62F50440CE2233C1A010968</key>
+		<key>86324EF7314DFDD1474CF4F51B3C16C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93E0A7485D002DA2C0CF390D2BDD7127</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>EE57040B0F2FD9464A60DBE1F82FE001</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F165A49DA2A787E67B3B65516F088B80</key>
 		<dict>
 			<key>primary</key>
 			<true/>

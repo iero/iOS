@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBB493311D37B59300A0807A"
-               BuildableName = "oneContact.temp_caseinsensitive_rename.app"
-               BlueprintName = "OneContact"
+               BlueprintIdentifier = "CBF6EC371D3BB202006126D7"
+               BuildableName = "oneContact.app"
+               BlueprintName = "oneContact"
                ReferencedContainer = "container:oneContact.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBB493451D37B59300A0807A"
-               BuildableName = "oneContact.temp_caseinsensitive_rename.xctest"
-               BlueprintName = "OneContactTests"
+               BlueprintIdentifier = "CBF6EC4B1D3BB203006126D7"
+               BuildableName = "oneContactTests.xctest"
+               BlueprintName = "oneContactTests"
                ReferencedContainer = "container:oneContact.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBB493501D37B59400A0807A"
-               BuildableName = "oneContact.temp_caseinsensitive_rename.xctest"
-               BlueprintName = "OneContactUITests"
+               BlueprintIdentifier = "CBF6EC561D3BB203006126D7"
+               BuildableName = "oneContactUITests.xctest"
+               BlueprintName = "oneContactUITests"
                ReferencedContainer = "container:oneContact.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,9 +52,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CBB493311D37B59300A0807A"
-            BuildableName = "oneContact.temp_caseinsensitive_rename.app"
-            BlueprintName = "OneContact"
+            BlueprintIdentifier = "CBF6EC371D3BB202006126D7"
+            BuildableName = "oneContact.app"
+            BlueprintName = "oneContact"
             ReferencedContainer = "container:oneContact.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +75,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CBB493311D37B59300A0807A"
-            BuildableName = "oneContact.temp_caseinsensitive_rename.app"
-            BlueprintName = "OneContact"
+            BlueprintIdentifier = "CBF6EC371D3BB202006126D7"
+            BuildableName = "oneContact.app"
+            BlueprintName = "oneContact"
             ReferencedContainer = "container:oneContact.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,9 +94,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CBB493311D37B59300A0807A"
-            BuildableName = "oneContact.temp_caseinsensitive_rename.app"
-            BlueprintName = "OneContact"
+            BlueprintIdentifier = "CBF6EC371D3BB202006126D7"
+            BuildableName = "oneContact.app"
+            BlueprintName = "oneContact"
             ReferencedContainer = "container:oneContact.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

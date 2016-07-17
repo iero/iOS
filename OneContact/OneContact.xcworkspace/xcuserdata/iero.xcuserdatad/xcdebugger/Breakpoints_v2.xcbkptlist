@@ -9,13 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490373275.738246"
+            filePath = "oneContact/MasterViewController.swift"
+            timestampString = "490465201.347813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "cleanAgilEntry(_:)"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "MasterViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/DetailViewController.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "load_image(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490365968.770609"
+            filePath = "oneContact/DetailViewController.swift"
+            timestampString = "490480603.513875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "init()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "load_image(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +57,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490369591.560614"
+            filePath = "oneContact/DetailViewController.swift"
+            timestampString = "490480603.513875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "searchNames(_:completion:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "display_image()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/DetailViewController.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "display_image()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/DetailViewController.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "load_image(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,284 +105,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490369591.560614"
+            filePath = "oneContact/MasterViewController.swift"
+            timestampString = "490480100.437966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "searchNames(_:completion:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.(search (Swift.String, completion : (result : Swift.String) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490292323.441042"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.(search (Swift.String, completion : (result : Swift.String) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490292323.441289"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "396">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490369591.560614"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "searchNames(_:completion:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.(search (Swift.String, completion : (result : Swift.String) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490290690.560591"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.(search (Swift.String, completion : (result : Swift.String) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490290690.560842"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "92">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490365968.770609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "init()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.init () -&gt; OneContact.AgilAPI"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490366284.413302"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "808">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.(init () -&gt; OneContact.AgilAPI).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490366284.413895"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "856">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490369591.560614"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "searchNames(_:completion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490369591.560614"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "searchNames(_:completion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490365968.770609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "init()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490365968.770609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "init()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490365968.770609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "init()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/AgilApi.swift"
-            timestampString = "490365968.770609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "init()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.init () -&gt; OneContact.AgilAPI"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490292323.4639"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "808">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.AgilAPI.(init () -&gt; OneContact.AgilAPI).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/AgilApi.swift"
-                  timestampString = "490292323.464106"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "996">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490368629.486623"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -345,13 +121,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490369369.734108"
+            filePath = "oneContact/MasterViewController.swift"
+            timestampString = "490480100.437966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "updateSearchResultsForSearchController(_:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -361,12 +137,92 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490373275.738246"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490480603.513875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "AgilAPI"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "searchNames(_:completionNames:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "searchNames(_:completionNames:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "AgilAPI"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "searchNames(_:completionNames:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/DetailViewController.swift"
+            timestampString = "490478283.571018"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "parseAgil(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -377,13 +233,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490373275.738246"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490480603.513875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "parseAgil(_:)"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "searchIGG(_:completionNames:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490480603.513875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "searchIGG(_:completionNames:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -393,13 +265,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490373275.738246"
+            filePath = "oneContact/AgilAPI.swift"
+            timestampString = "490479937.616491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "parseAgil(_:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "init()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -409,12 +281,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490373275.738246"
+            filePath = "oneContact/MasterViewController.swift"
+            timestampString = "490480653.226243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "parseAgil(_:)"
             landmarkType = "5">
             <Locations>
@@ -422,79 +294,31 @@
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "OneContact.SearchTableViewController.(parseAgil (Swift.String) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "OneContact"
+                  symbolName = "oneContact.MasterViewController.(parseAgil (Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "oneContact"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/SearchTableViewController.swift"
-                  timestampString = "490370415.028733"
+                  urlString = "file:///Users/iero/Documents/iOS/oneContact/oneContact/MasterViewController.swift"
+                  timestampString = "490480653.353815"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "161"
-                  endingLineNumber = "161"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oneContact.MasterViewController.(parseAgil (Swift.String) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "oneContact"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iero/Documents/iOS/oneContact/oneContact/MasterViewController.swift"
+                  timestampString = "490480653.354266"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "265"
+                  endingLineNumber = "265"
                   offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.SearchTableViewController.(parseAgil (Swift.String) -&gt; ()).(closure #1).(closure #1).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/SearchTableViewController.swift"
-                  timestampString = "490370415.029106"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "161"
-                  endingLineNumber = "161"
-                  offsetFromSymbolStart = "384">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OneContact/SearchTableViewController.swift"
-            timestampString = "490373275.738246"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "parseAgil(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.SearchTableViewController.(parseAgil (Swift.String) -&gt; ()).(closure #2).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/SearchTableViewController.swift"
-                  timestampString = "490370415.030889"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OneContact.SearchTableViewController.(parseAgil (Swift.String) -&gt; ()).(closure #2).(closure #1).(closure #1)"
-                  moduleName = "OneContact"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iero/Documents/iOS/OneContact/OneContact/SearchTableViewController.swift"
-                  timestampString = "490370415.03117"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "384">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -505,14 +329,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OneContact/PersonItem.swift"
-            timestampString = "490372690.599235"
+            filePath = "oneContact/MasterViewController.swift"
+            timestampString = "490480734.430343"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "init(surname:name:igg:phoneRig:phoneOffice:phoneMobile:entity:countryID:site:)"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "parseAgil(_:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oneContact.MasterViewController.(parseAgil (Swift.String) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "oneContact"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iero/Documents/iOS/oneContact/oneContact/MasterViewController.swift"
+                  timestampString = "490480734.434668"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "265"
+                  endingLineNumber = "265"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oneContact.MasterViewController.(parseAgil (Swift.String) -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "oneContact"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iero/Documents/iOS/oneContact/oneContact/MasterViewController.swift"
+                  timestampString = "490480734.434885"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "265"
+                  endingLineNumber = "265"
+                  offsetFromSymbolStart = "608">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
