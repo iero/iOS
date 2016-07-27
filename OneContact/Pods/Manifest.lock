@@ -1,12 +1,15 @@
 PODS:
   - Kanna (1.1.0)
+  - UIImageView-Letters (1.1.4)
 
 DEPENDENCIES:
   - Kanna (~> 1.1.0)
+  - UIImageView-Letters
 
 SPEC CHECKSUMS:
   Kanna: 355ed0193e5d8caf4fd996856b5bc98d586c11b6
+  UIImageView-Letters: f62db28076797adf3560ab7410647dc6899b9eef
 
-PODFILE CHECKSUM: 99913fc6d18faf7a34bc87cd503c94faba6f6468
+PODFILE CHECKSUM: 26d4f485a44de09a3d752ae2f00d849b176d471a
 
 COCOAPODS: 1.0.1

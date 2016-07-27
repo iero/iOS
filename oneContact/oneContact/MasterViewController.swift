@@ -11,24 +11,22 @@ import Kanna
 
 class MasterViewController: UITableViewController, NSXMLParserDelegate {
     var xmlParser: NSXMLParser!
-    var personsArray = [PersonItem]()
     var owner = [PersonItem]()
     
+    var filteredArray = [PersonItem]() // Already search data
+    var personsArray = [PersonItem]() // People stored localy
+    var baseArray = [PersonItem]() // Saved database
     
     // MARK: - Properties
     var detailViewController: DetailViewController? = nil
     let searchController = UISearchController(searchResultsController: nil)
-    
+   
     // MARK: - View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = AgilAPI() // Open session
-        
-        //Load Owner details from plist into Array
-//        let path = NSBundle.mainBundle().pathForResource("Owner", ofType: "plist")
-//        let dictArray = NSArray(contentsOfFile: path!)
-        
+        // Load owner of software
+        // Todo  : Call for details if file doesn't exists
         if let plist = Plist(name: "Owner") {
             //Write
 //            let dict = plist.getMutablePlistFile()!
@@ -57,14 +55,19 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate {
                     ownerEntity = val
                 }
             }
-            let o = PersonItem(surname: ownerSurname, name: ownerName, igg: ownerIgg, phoneRig: "", phoneOffice: "", phoneMobile: "", entity: ownerEntity, countryID: "", site: "")
+            let o = PersonItem(surname: ownerSurname, name: ownerName, igg: ownerIgg, entity: ownerEntity)
             owner.append(o)
 
         } else {
             print("Unable to get Owner Plist")
         }
-        //for field in dictArray! {
-        //}
+        
+        /* Load local list */
+        
+        let ownKey = PlistManager.sharedInstance.getValueForKey("J0235385")
+        print(ownKey)
+        
+        baseArray = PlistManager.sharedInstance.loadUsers()
         
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
@@ -72,8 +75,6 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate {
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         
-        // Setup the Scope Bar
-        //searchController.searchBar.scopeButtonTitles = ["All", "Explo", "DEV", "Other"]
         tableView.tableHeaderView = searchController.searchBar
         
         if let splitViewController = splitViewController {
@@ -99,10 +100,10 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.active && searchController.searchBar.text != "" {
             //return filteredCandies.count
-            return personsArray.count
+            return filteredArray.count
         }
         //return pers.count
-        return personsArray.count
+        return filteredArray.count
         //return 0
     }
     
@@ -115,9 +116,26 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate {
             candy = candies[indexPath.row]
         }*/
         
+        //var iconImage : UIImage
+/*        let iconImage = FGInitialCircleImage.circleImage("John", lastName: "Appleseed", size: cell.imageView!.frame.size.width, borderWidth: 5, borderColor: UIColor.clearColor(), backgroundColor: UIColor.blueColor(), textColor: UIColor.whiteColor());*/
         
-        cell.textLabel!.text = personsArray[indexPath.row].getCompleteName()
-        cell.detailTextLabel!.text = self.personsArray[indexPath.row].getEntityName()
+/*        let imageName = "logo.jpg"
+        let image = UIImage(named: imageName)
+        let newImage = resizeImage(image!, toTheSize: CGSizeMake(70, 70))
+        var cellImageLayer: CALayer?  = cell.imageView!.layer
+        cellImageLayer!.cornerRadius = cellImageLayer!.frame.size.width / 2
+        cellImageLayer!.masksToBounds = true
+        cell.imageView!.image = newImage*/
+        
+        
+        
+        //let image : UIImage = UIImage(named: "osx_design_view_messages")!
+        //println("The loaded image: \(image)")
+//        cell.imageView!.image = iconImage
+
+        
+        cell.textLabel!.text = filteredArray[indexPath.row].getCompleteName()
+        cell.detailTextLabel!.text = self.filteredArray[indexPath.row].getEntityName()
         return cell
     }
     
@@ -142,171 +160,90 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate {
                 
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 //controller.detailCandy = candy
-                controller.person = personsArray[indexPath.row]
+                controller.person = filteredArray[indexPath.row]
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        print("Search button hit")
+    }
+    
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         // 3 characters minimum
         if searchController.searchBar.text?.characters.count > 2 {
-            print("New search : clean table")
-            personsArray.removeAll(keepCapacity: false)
-            parseAgil(searchController.searchBar.text!)
+            // Wait to call
+            let debouncedFunction = Debouncer(delay: 0.25) {
+                self.searchItems()
+            }
+            debouncedFunction.call()
+        } else {
+            filteredArray.removeAll(keepCapacity: false)
+            self.tableView.reloadData()
         }
     }
-    /*
-    func parseAgilResults(result : String) {
-        if let doc = Kanna.HTML(html: result, encoding: NSUTF8StringEncoding) {
-            
-            var currentSurname = ""
-            var currentName = ""
-            var currentIGG=""
-            
-            var currentphoneRIG=""
-            var currentphoneOffice=""
-            var currentphoneMobile=""
-            
-            var currentEntity = [String]()
-            var currentCountryID = ""
-            var currentSite = ""
-            
-            var person: PersonItem
 
-            for node in doc.xpath("//div[contains(@class,'noResult')]") {
-                print(node.content)
-            }
-            
-            for node in doc.xpath("//div/div/div/div[contains(@class,'personfield')] | //div/div/div/div/a[contains(@onclick,'personneSheet')]") {
-                
-                // New people
-                if (node.className == "personfield1") {
-                    // Save person before saveing a new one
-                    if (personsArray.filter{$0.igg == currentIGG}.count == 0 && !currentIGG.isEmpty && !currentName.isEmpty && !currentSurname.isEmpty) {
-                        person = PersonItem(surname: currentSurname, name: currentName, igg: currentIGG, phoneRig: currentphoneRIG, phoneOffice: currentphoneOffice, phoneMobile: currentphoneMobile, entity: currentEntity, countryID: currentCountryID, site: currentSite)
-                        self.personsArray += [person]
-                    }
-                    
-                    currentSurname = ""
-                    currentName = ""
-                    currentIGG=""
-                    currentphoneRIG=""
-                    currentphoneOffice=""
-                    currentphoneMobile=""
-                    currentEntity = [String]()
-                    currentCountryID = ""
-                    currentSite = ""
-                }
-                
-                if (node["onclick"] != nil) {
-                    let strnode = node["onclick"]
-                    let range = strnode!.startIndex.advancedBy(15) ..< strnode!.startIndex.advancedBy(23)
-                    currentIGG = strnode!.substringWithRange(range)
-                    //print("[IGG]"+currentIGG)
-                } else {
-                    let strnode = self.cleanAgilEntry(node.text!)
-                    if (!strnode.isEmpty) {
-                        if (node.className == "personfield1") { // Name broker
-                            //print("Break "+strnode)
-                            let sA = strnode.characters.split{$0 == " "}.map(String.init)
-                            for s in sA {
-                                if (self.checkifLowerCaseIncluded(s)) {
-                                    //print("[Name]"+s)
-                                    if (currentName == "") {
-                                        currentName = s;
-                                    } else {
-                                        currentName = currentName+" "+s
-                                    }
-                                } else {
-                                    //print("[SurName]"+s)
-                                    if (currentSurname == "") {
-                                        currentSurname = s;
-                                    } else {
-                                        currentSurname = currentSurname+" "+s
-                                    }
-                                    
-                                }
-                            }
-                        } else if (node.className == "personfield3") { // RIG Phone
-                            currentphoneRIG=strnode
-                        } else if (node.className == "personfield4") { // Office Phone
-                            currentphoneOffice=strnode
-                        } else if (node.className == "personfieldX") { // Mobile Phone
-                            currentphoneMobile=strnode
-                        } else if (node.className == "personfield5") { // Entity
-                            currentEntity = strnode.characters.split{$0 == "/"}.map(String.init)
-                        } else if (node.className == "personfield6") { // country ID
-                            currentCountryID=strnode
-                        } else if (node.className == "personfield7") { // Site
-                            currentSite=strnode
-                        } else {
-                            print("["+node.className!+"]"+strnode)
-                        }
-                        
-                    }
-                }
-                
-            }
-            
-        }
-    }
-    */
-    func parseAgil(search :String) {
+    func searchItems() {
+        print("New search : clean table")
+        filteredArray.removeAll(keepCapacity: false)
         
-        print("Looking for surnames containing "+search)
-        let agil = AgilSearchNames()
-        let agilutils = AgilUtils()
-        agil.searchSurnames(search) {
-            (result: String) in agilutils.parseAgilResults(result)
+        let searchText = searchController.searchBar.text?.lowercaseString
+        
+        filteredArray=self.baseArray.filter() {
+            ($0.surname.lowercaseString as NSString).containsString(searchText!)
+        }
+        
+        self.filteredArray.sortInPlace({ $0.getNameForListing() < $1.getNameForListing() })
+        self.tableView.reloadData()
+        
+        let agil = AgilAPI()
+        agil.searchSurnames("*"+searchText!+"*") {
+            (completionSurnames: [PersonItem]) in //agilutils.parseAgilResults(result)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.personsArray.sortInPlace({ $0.getNameForListing() < $1.getNameForListing() })
-                print(String(self.personsArray.count)+" persons after surname search")
+                print(String(completionSurnames.count)+" persons after surname search")
+                for p in completionSurnames {
+                    //if (self.personsArray.filter{$0.igg == p.igg}.count == 0) {
+                    //    self.personsArray.append(p)
+                    //}
+                    if (self.baseArray.filter{$0.igg == p.igg}.count == 0) {
+                        let dict = ["surname": p.surname, "name": p.name, "entity" : p.getEntityName()]
+                        PlistManager.sharedInstance.addNewItemWithKey(p.igg, value: dict)
+                        self.baseArray.append(p)
+                    }
+                }
+                self.filteredArray=self.baseArray.filter() {
+                    ($0.surname.lowercaseString as NSString).containsString(searchText!)
+                }
+                self.filteredArray.sortInPlace({ $0.getNameForListing() < $1.getNameForListing() })
                 self.tableView.reloadData()
             })
         }
-        /*
-        print("Looking for names containing "+search)
-        agil.searchNames(search) {
-            (resultNames: String) in self.parseAgilResults(resultNames)
-            //self.tableView.reloadData()
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.personsArray.sortInPlace({ $0.surname < $1.surname })
-                print(String(self.personsArray.count)+" persons after name search")
-                self.tableView.reloadData()
-            })
-        }*/
-        
-    }
-    /*
-    func checkifLowerCaseIncluded(text : String) -> Bool{
-        let lowerLetterRegEx  = ".*[a-z]+.*"
-        let t = NSPredicate(format:"SELF MATCHES %@", lowerLetterRegEx)
-        return t.evaluateWithObject(text)
     }
     
-    func capitalLettersParts(s: String) -> [Character] {
-        return s.characters.filter { ("A"..."Z").contains($0) }
-    }
+} // end of class
+
+func debounce( delay:NSTimeInterval, queue:dispatch_queue_t, action: (()->()) ) -> ()->() {
+    var lastFireTime:dispatch_time_t = 0
+    let dispatchDelay = Int64(delay * Double(NSEC_PER_SEC))
     
-    func cleanAgilEntry(string: String) -> String {
-        let components = string.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        let filtered = components.filter({!$0.isEmpty})
-        var result = filtered.joinWithSeparator(" ")
-        result = result.stringByReplacingOccurrencesOfString("\"", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        result = result.stringByReplacingOccurrencesOfString("\t", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        result = result.stringByReplacingOccurrencesOfString("\n", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        result = result.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        if (result == ".") {
-            return ""
-        }
-        else {
-            return result
+    return {
+        lastFireTime = dispatch_time(DISPATCH_TIME_NOW,0)
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                dispatchDelay
+            ),
+            queue) {
+                let now = dispatch_time(DISPATCH_TIME_NOW,0)
+                let when = dispatch_time(lastFireTime, dispatchDelay)
+                if now >= when {
+                    action()
+                }
         }
     }
-    */
 }
 
 extension MasterViewController: UISearchBarDelegate {

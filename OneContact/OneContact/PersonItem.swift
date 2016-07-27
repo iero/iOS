@@ -12,49 +12,47 @@ struct PersonItem {
     let surname: String //Nom
     let name: String    //Prenom
     let igg: String
-    
-    let phoneOffice: String
-    let phoneRIG: String
-    let phoneMobile: String
-    
-    let countryID: String
-    let site: String
-    
     var entity = [String]()
-    
-    init(surname: String, name: String, igg: String, phoneRig : String, phoneOffice : String, phoneMobile : String, entity : [String], countryID :String, site : String) {
-        self.name = name
-        self.surname = surname
-        self.igg = igg
-        self.phoneOffice=phoneOffice
-        self.phoneRIG=phoneRig
-        self.phoneMobile=phoneMobile
-        self.entity = entity
-        self.countryID = countryID
-        self.site = site
-        
-        /*print(self.igg + " ["+self.name+"] ["+self.surname+"] added")
-        print("  Entity : "+self.getEntityName())
-        print("  Location : ["+self.countryID+"] ["+self.site+"]")
-        print("  Phone : ["+self.phoneRIG+"] ["+self.phoneOffice+"] ["+self.phoneMobile+"]")*/
-    }
 
-    init(surname: String, name: String, igg: String, phoneRig : String, phoneOffice : String, phoneMobile : String, entity : String, countryID :String, site : String) {
+    // For detailed profile
+    var office: String?
+    var email: String?
+    
+    //var rank: Int? // 1 in same division, 2 in same entity..
+    
+    
+    init(surname: String, name: String, igg: String, entity : [String]) {
         self.name = name
         self.surname = surname
         self.igg = igg
-        self.phoneOffice=phoneOffice
-        self.phoneRIG=phoneRig
-        self.phoneMobile=phoneMobile
-        self.entity = entity.characters.split{$0 == "/"}.map(String.init)
-        self.countryID = countryID
-        self.site = site
+        self.entity = entity
+}
+
+    init(surname: String, name: String, igg: String, entity : String) {
+        self.name = name
+        self.surname = surname
+        self.igg = igg
+        setEntityName(entity)
         
-        print(self.igg + " ["+self.name+"] ["+self.surname+"] added")
-         print("  Entity : "+self.getEntityName())
-         print("  Location : ["+self.countryID+"] ["+self.site+"]")
-         print("  Phone : ["+self.phoneRIG+"] ["+self.phoneOffice+"] ["+self.phoneMobile+"]")
+        //print(self.igg + " ["+self.name+"] ["+self.surname+"] added")
+        //print("  Entity : "+self.getEntityName())
     }
+    
+     /*func computeRank(ent : [String]) {
+        var i=0
+        var r=0
+        for e in ent {
+            if (self.entity.count >= i && e == self.entity[i]) {
+                r += 1
+                i += 1
+            } else {
+                rank = r
+                return
+            }
+        }
+        rank = r
+        return
+    }*/
     
     func getCompleteName() -> String {
         return name+" "+surname
@@ -77,5 +75,21 @@ struct PersonItem {
         return e
     }
     
+    mutating func setEntityName(entity: String) {
+        self.entity = entity.characters.split{$0 == "/"}.map(String.init)
+    }
     
+/*    func encodeWithCoder(aCoder: NSCoder!) {
+        aCoder.encodeObject(igg, forKey:"igg")
+        aCoder.encodeObject(surname, forKey:"surname")
+        aCoder.encodeObject(name, forKey:"name")
+        aCoder.encodeObject(getEntityName(), forKey:"entity")
+    }
+    
+    init (coder aDecoder: NSCoder!) {
+        self.igg = aDecoder.decodeObjectForKey("igg") as! String
+        self.surname = aDecoder.decodeObjectForKey("surname") as! String
+        self.name = aDecoder.decodeObjectForKey("name") as! String
+        setEntityName(aDecoder.decodeObjectForKey("entity") as! String)
+    }*/
 }

@@ -8,10 +8,12 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController  {
     
     @IBOutlet weak var personPicture: UIImageView!
     @IBOutlet weak var igg: UILabel!
+    @IBOutlet weak var office: UILabel!
+    @IBOutlet weak var email: UITextView!
     
     enum ErrorHandling:ErrorType
     {
@@ -22,6 +24,21 @@ class DetailViewController: UIViewController {
         didSet {
             configureView()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        personPicture.layer.borderWidth = 1
+        personPicture.layer.masksToBounds = false
+        personPicture.layer.borderColor = UIColor.blackColor().CGColor
+        personPicture.layer.cornerRadius = personPicture.frame.height/2
+        personPicture.clipsToBounds = true
+        
+        email.editable = false
+        email.dataDetectorTypes = UIDataDetectorTypes.All
+        
+        configureView()
     }
     
     func configureView() {
@@ -39,16 +56,19 @@ class DetailViewController: UIViewController {
     func parseAgil(igg: String) {
         print("Looking for details on "+igg)
         let agil = AgilAPI()
-        let agilutils = AgilUtils()
         agil.searchIGG(igg) {
-            (result: String) in agilutils.parseAgilResults(result)
-            //self.tableView.reloadData()
+            (completionIGG: PersonItem) in //agilutils.parseAgilResults(result)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                //personsArray.sortInPlace({ $0.surname < $1.surname })
-                //print(String(self.personsArray.count)+" persons after name search")
+               print(completionIGG.getCompleteName())
+                self.email.text = completionIGG.email!
+                self.office.text = completionIGG.office
+                self.email.attributedText = NSMutableAttributedString(string: "mailto:"+completionIGG.email!)
+/*                let attributedString = NSMutableAttributedString(string: completionIGG.email!)
+                attributedString.addAttribute(NSLinkAttributeName, value: "mailto:"+completionIGG.email!, range: NSRange(location: 19, length: 55))
+                self.email.attributedText = attributedString*/
+
             })
         }
-        
     }
     
     func load_image(urlString:String)
@@ -75,12 +95,6 @@ class DetailViewController: UIViewController {
         }
         
         task.resume()
-    }
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureView()
     }
     
     override func didReceiveMemoryWarning() {

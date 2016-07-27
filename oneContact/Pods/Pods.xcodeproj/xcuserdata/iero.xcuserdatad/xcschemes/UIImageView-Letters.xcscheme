@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88C5AC556069D48D3C195D806DCEEEAE"
-               BuildableName = "Pods_oneContact.framework"
-               BlueprintName = "Pods-oneContact"
+               BlueprintIdentifier = "35C770D386488A9B104942A4D3B3DC6E"
+               BuildableName = "UIImageView_Letters.framework"
+               BlueprintName = "UIImageView-Letters"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "88C5AC556069D48D3C195D806DCEEEAE"
-            BuildableName = "Pods_oneContact.framework"
-            BlueprintName = "Pods-oneContact"
+            BlueprintIdentifier = "35C770D386488A9B104942A4D3B3DC6E"
+            BuildableName = "UIImageView_Letters.framework"
+            BlueprintName = "UIImageView-Letters"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

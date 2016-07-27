@@ -12,8 +12,10 @@
 		6D2E0117D1814E8699E03A29 /* Pods_oneContactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24765369CECE2B6AFD09FA8 /* Pods_oneContactUITests.framework */; };
 		CB2EEFBA1D3BE41F003827E9 /* Owner.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2EEFB91D3BE41F003827E9 /* Owner.plist */; };
 		CB2EEFBC1D3BE964003827E9 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBB1D3BE964003827E9 /* Plist.swift */; };
-		CB2EEFBE1D3C2287003827E9 /* AgilUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBD1D3C2287003827E9 /* AgilUtils.swift */; };
 		CB2EEFC01D3C22F3003827E9 /* AgilSearchNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */; };
+		CBCB13BF1D3D5E11004D53DB /* ResearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */; };
+		CBCB13C11D3D85B5004D53DB /* PersonItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */; };
+		CBCB13C51D3EB182004D53DB /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13C41D3EB182004D53DB /* Debouncer.swift */; };
 		CBF6EC3C1D3BB202006126D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */; };
 		CBF6EC3E1D3BB202006126D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC3D1D3BB202006126D7 /* ViewController.swift */; };
 		CBF6EC411D3BB202006126D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF6EC3F1D3BB202006126D7 /* Main.storyboard */; };
@@ -25,6 +27,9 @@
 		CBF6EC6E1D3BB603006126D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC6D1D3BB603006126D7 /* DetailViewController.swift */; };
 		CBF6EC721D3BB859006126D7 /* AgilAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC711D3BB859006126D7 /* AgilAPI.swift */; };
 		CBF6EC741D3BBD33006126D7 /* PersonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC731D3BBD33006126D7 /* PersonItem.swift */; };
+		CBFC7ADF1D44F5AC00311EC3 /* FGInitialCircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFC7ADE1D44F5AC00311EC3 /* FGInitialCircleImage.swift */; };
+		CBFC7AE11D46AAF800311EC3 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFC7AE01D46AAF800311EC3 /* PlistManager.swift */; };
+		CBFC7AE31D46ADBB00311EC3 /* Employees.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBFC7AE21D46ADBA00311EC3 /* Employees.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +59,10 @@
 		B34A90E13D31E014FEDC8B37 /* Pods-oneContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneContact/Pods-oneContact.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2EEFB91D3BE41F003827E9 /* Owner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Owner.plist; sourceTree = "<group>"; };
 		CB2EEFBB1D3BE964003827E9 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
-		CB2EEFBD1D3C2287003827E9 /* AgilUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilUtils.swift; sourceTree = "<group>"; };
 		CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilSearchNames.swift; sourceTree = "<group>"; };
+		CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchItem.swift; sourceTree = "<group>"; };
+		CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonItemDetails.swift; sourceTree = "<group>"; };
+		CBCB13C41D3EB182004D53DB /* Debouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		CBF6EC381D3BB202006126D7 /* oneContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBF6EC3D1D3BB202006126D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +80,9 @@
 		CBF6EC6D1D3BB603006126D7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CBF6EC711D3BB859006126D7 /* AgilAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilAPI.swift; sourceTree = "<group>"; };
 		CBF6EC731D3BBD33006126D7 /* PersonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonItem.swift; sourceTree = "<group>"; };
+		CBFC7ADE1D44F5AC00311EC3 /* FGInitialCircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGInitialCircleImage.swift; sourceTree = "<group>"; };
+		CBFC7AE01D46AAF800311EC3 /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
+		CBFC7AE21D46ADBA00311EC3 /* Employees.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Employees.plist; sourceTree = "<group>"; };
 		D0451F5DA1A1B06B87D6DA21 /* Pods-oneContactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContactTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneContactTests/Pods-oneContactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24765369CECE2B6AFD09FA8 /* Pods_oneContactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneContactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,10 +173,15 @@
 				CBF6EC6D1D3BB603006126D7 /* DetailViewController.swift */,
 				CBF6EC711D3BB859006126D7 /* AgilAPI.swift */,
 				CBF6EC731D3BBD33006126D7 /* PersonItem.swift */,
+				CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */,
 				CB2EEFB91D3BE41F003827E9 /* Owner.plist */,
 				CB2EEFBB1D3BE964003827E9 /* Plist.swift */,
-				CB2EEFBD1D3C2287003827E9 /* AgilUtils.swift */,
 				CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */,
+				CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */,
+				CBCB13C41D3EB182004D53DB /* Debouncer.swift */,
+				CBFC7ADE1D44F5AC00311EC3 /* FGInitialCircleImage.swift */,
+				CBFC7AE01D46AAF800311EC3 /* PlistManager.swift */,
+				CBFC7AE21D46ADBA00311EC3 /* Employees.plist */,
 			);
 			path = oneContact;
 			sourceTree = "<group>";
@@ -304,6 +319,7 @@
 			files = (
 				CB2EEFBA1D3BE41F003827E9 /* Owner.plist in Resources */,
 				CBF6EC461D3BB202006126D7 /* LaunchScreen.storyboard in Resources */,
+				CBFC7AE31D46ADBB00311EC3 /* Employees.plist in Resources */,
 				CBF6EC431D3BB202006126D7 /* Assets.xcassets in Resources */,
 				CBF6EC411D3BB202006126D7 /* Main.storyboard in Resources */,
 			);
@@ -453,15 +469,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCB13C11D3D85B5004D53DB /* PersonItemDetails.swift in Sources */,
+				CBFC7ADF1D44F5AC00311EC3 /* FGInitialCircleImage.swift in Sources */,
 				CB2EEFC01D3C22F3003827E9 /* AgilSearchNames.swift in Sources */,
-				CB2EEFBE1D3C2287003827E9 /* AgilUtils.swift in Sources */,
 				CB2EEFBC1D3BE964003827E9 /* Plist.swift in Sources */,
 				CBF6EC3E1D3BB202006126D7 /* ViewController.swift in Sources */,
 				CBF6EC741D3BBD33006126D7 /* PersonItem.swift in Sources */,
+				CBCB13C51D3EB182004D53DB /* Debouncer.swift in Sources */,
+				CBCB13BF1D3D5E11004D53DB /* ResearchItem.swift in Sources */,
 				CBF6EC3C1D3BB202006126D7 /* AppDelegate.swift in Sources */,
 				CBF6EC6A1D3BB5C6006126D7 /* MasterViewController.swift in Sources */,
 				CBF6EC721D3BB859006126D7 /* AgilAPI.swift in Sources */,
 				CBF6EC6E1D3BB603006126D7 /* DetailViewController.swift in Sources */,
+				CBFC7AE11D46AAF800311EC3 /* PlistManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
