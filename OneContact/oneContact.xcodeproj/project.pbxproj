@@ -12,7 +12,6 @@
 		6D2E0117D1814E8699E03A29 /* Pods_oneContactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24765369CECE2B6AFD09FA8 /* Pods_oneContactUITests.framework */; };
 		CB2EEFBA1D3BE41F003827E9 /* Owner.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2EEFB91D3BE41F003827E9 /* Owner.plist */; };
 		CB2EEFBC1D3BE964003827E9 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBB1D3BE964003827E9 /* Plist.swift */; };
-		CB2EEFC01D3C22F3003827E9 /* AgilSearchNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */; };
 		CBCB13BF1D3D5E11004D53DB /* ResearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */; };
 		CBCB13C11D3D85B5004D53DB /* PersonItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */; };
 		CBCB13C51D3EB182004D53DB /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13C41D3EB182004D53DB /* Debouncer.swift */; };
@@ -59,7 +58,6 @@
 		B34A90E13D31E014FEDC8B37 /* Pods-oneContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneContact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-oneContact/Pods-oneContact.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2EEFB91D3BE41F003827E9 /* Owner.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Owner.plist; sourceTree = "<group>"; };
 		CB2EEFBB1D3BE964003827E9 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
-		CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgilSearchNames.swift; sourceTree = "<group>"; };
 		CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchItem.swift; sourceTree = "<group>"; };
 		CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonItemDetails.swift; sourceTree = "<group>"; };
 		CBCB13C41D3EB182004D53DB /* Debouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */,
 				CB2EEFB91D3BE41F003827E9 /* Owner.plist */,
 				CB2EEFBB1D3BE964003827E9 /* Plist.swift */,
-				CB2EEFBF1D3C22F3003827E9 /* AgilSearchNames.swift */,
 				CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */,
 				CBCB13C41D3EB182004D53DB /* Debouncer.swift */,
 				CBFC7ADE1D44F5AC00311EC3 /* FGInitialCircleImage.swift */,
@@ -471,7 +468,6 @@
 			files = (
 				CBCB13C11D3D85B5004D53DB /* PersonItemDetails.swift in Sources */,
 				CBFC7ADF1D44F5AC00311EC3 /* FGInitialCircleImage.swift in Sources */,
-				CB2EEFC01D3C22F3003827E9 /* AgilSearchNames.swift in Sources */,
 				CB2EEFBC1D3BE964003827E9 /* Plist.swift in Sources */,
 				CBF6EC3E1D3BB202006126D7 /* ViewController.swift in Sources */,
 				CBF6EC741D3BBD33006126D7 /* PersonItem.swift in Sources */,

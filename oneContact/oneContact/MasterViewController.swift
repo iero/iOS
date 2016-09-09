@@ -8,14 +8,46 @@
 
 import UIKit
 import Kanna
+import MessageUI
 
-class MasterViewController: UITableViewController, NSXMLParserDelegate {
+class MasterViewController: UITableViewController, NSXMLParserDelegate, MFMailComposeViewControllerDelegate {
     var xmlParser: NSXMLParser!
     var owner = [PersonItem]()
     
     var filteredArray = [PersonItem]() // Already search data
-    var personsArray = [PersonItem]() // People stored localy
+    //var personsArray = [PersonItem]() // People stored localy
     var baseArray = [PersonItem]() // Saved database
+    
+    @IBOutlet weak var options: UIBarButtonItem!
+    
+    @IBAction func sendEmail(sender: UIButton) {
+        //Check to see the device can send email.
+        if( MFMailComposeViewController.canSendMail() ) {
+            print("Can send email.")
+            
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate = self
+            
+            //Set the subject and message of the email
+            mailComposer.setSubject("Have you heard a swift?")
+            mailComposer.setMessageBody("This is what they sound like.", isHTML: false)
+            
+            if let filePath = NSBundle.mainBundle().pathForResource("Employees", ofType: "plist") {
+                print("File path loaded.")
+                
+                if let fileData = NSData(contentsOfFile: filePath) {
+                    print("File data loaded.")
+                    mailComposer.addAttachmentData(fileData, mimeType: "application/xml", fileName: "Employees.plist")
+                }
+            }
+            self.presentViewController(mailComposer, animated: true, completion: nil)
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     // MARK: - Properties
     var detailViewController: DetailViewController? = nil
@@ -28,15 +60,6 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate {
         // Load owner of software
         // Todo  : Call for details if file doesn't exists
         if let plist = Plist(name: "Owner") {
-            //Write
-//            let dict = plist.getMutablePlistFile()!
-//            dict[YearBornKey] = 1979
-//            do {
-//                try plist.addValuesToPlistFile(dict)
-//            } catch {
-//                print(error)
-//            }
-            //print(plist.getValuesInPlistFile())
             var ownerSurname=""
             var ownerName=""
             var ownerIgg=""
@@ -67,7 +90,7 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate {
         let ownKey = PlistManager.sharedInstance.getValueForKey("J0235385")
         print(ownKey)
         
-        baseArray = PlistManager.sharedInstance.loadUsers()
+        //baseArray = PlistManager.sharedInstance.loadUsers()
         
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
@@ -244,6 +267,7 @@ func debounce( delay:NSTimeInterval, queue:dispatch_queue_t, action: (()->()) ) 
                 }
         }
     }
+
 }
 
 extension MasterViewController: UISearchBarDelegate {

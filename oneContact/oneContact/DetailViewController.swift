@@ -60,13 +60,9 @@ class DetailViewController: UIViewController  {
             (completionIGG: PersonItem) in //agilutils.parseAgilResults(result)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                print(completionIGG.getCompleteName())
-                self.email.text = completionIGG.email!
                 self.office.text = completionIGG.office
+                self.email.text = "mailto:"+completionIGG.email!
                 self.email.attributedText = NSMutableAttributedString(string: "mailto:"+completionIGG.email!)
-/*                let attributedString = NSMutableAttributedString(string: completionIGG.email!)
-                attributedString.addAttribute(NSLinkAttributeName, value: "mailto:"+completionIGG.email!, range: NSRange(location: 19, length: 55))
-                self.email.attributedText = attributedString*/
-
             })
         }
     }

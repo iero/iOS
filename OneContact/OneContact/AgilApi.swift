@@ -14,8 +14,34 @@ class AgilAPI {
     let baseUrl = NSURL(string: "http://agil.corp.local/agil/personne.view?actionaig=init")!
     let searchUrl = NSURL(string: "http://agil.corp.local/agil/personne.view")!
     
+    var owner : PersonItem?
+    
     init() {
         print("Initiate Agil connection")
+        
+        if let plist = Plist(name: "Owner") {
+            var ownerSurname=""
+            var ownerName=""
+            var ownerIgg=""
+            var ownerEntity=""
+            
+            for p in plist.getValuesInPlistFile()! {
+                let key = p.key as! String
+                let val = p.value as! String
+                if key == "surname" {
+                    ownerSurname = val
+                } else if key == "name" {
+                    ownerName = val
+                } else if key == "igg" {
+                    ownerIgg = val
+                } else if key == "entity" {
+                    ownerEntity = val
+                }
+            }
+            owner = PersonItem(surname: ownerSurname, name: ownerName, igg: ownerIgg, entity: ownerEntity)
+        } else {
+            print("Unable to get Owner Plist")
+        }
         
         let s = NSURLSession.sharedSession()
         let task = s.dataTaskWithURL(baseUrl) {
@@ -31,8 +57,6 @@ class AgilAPI {
             //let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             //let dataString = NSString(data: data!, encoding: NSASCIIStringEncoding)
             //print(dataString)
-            
-            
         }
         task.resume()
     }
@@ -245,7 +269,7 @@ class AgilAPI {
                             // Save person
                             if (personsArray.filter{$0.igg == currentIGG}.count == 0 && !currentIGG.isEmpty && !currentName.isEmpty && !currentSurname.isEmpty) {
                                 person = PersonItem(surname: currentSurname, name: currentName, igg: currentIGG, entity: currentEntity)
-                                //person.computeRank(owner.entity)
+                                person.computeRank(owner!.entity)
                                 personsArray += [person]
                             }
                             /*} else {

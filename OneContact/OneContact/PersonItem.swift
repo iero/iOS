@@ -18,7 +18,7 @@ struct PersonItem {
     var office: String?
     var email: String?
     
-    //var rank: Int? // 1 in same division, 2 in same entity..
+    var rank: Int? // 1 in same division, 2 in same entity..
     
     
     init(surname: String, name: String, igg: String, entity : [String]) {
@@ -38,7 +38,7 @@ struct PersonItem {
         //print("  Entity : "+self.getEntityName())
     }
     
-     /*func computeRank(ent : [String]) {
+     mutating func computeRank(ent : [String]) {
         var i=0
         var r=0
         for e in ent {
@@ -52,7 +52,7 @@ struct PersonItem {
         }
         rank = r
         return
-    }*/
+    }
     
     func getCompleteName() -> String {
         return name+" "+surname
