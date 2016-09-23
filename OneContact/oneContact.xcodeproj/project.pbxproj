@@ -15,6 +15,7 @@
 		CBCB13BF1D3D5E11004D53DB /* ResearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */; };
 		CBCB13C11D3D85B5004D53DB /* PersonItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */; };
 		CBCB13C51D3EB182004D53DB /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB13C41D3EB182004D53DB /* Debouncer.swift */; };
+		CBD18D041D83052D00F271C4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD18D031D83052D00F271C4 /* logo.png */; };
 		CBF6EC3C1D3BB202006126D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */; };
 		CBF6EC3E1D3BB202006126D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6EC3D1D3BB202006126D7 /* ViewController.swift */; };
 		CBF6EC411D3BB202006126D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF6EC3F1D3BB202006126D7 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		CBCB13BE1D3D5E11004D53DB /* ResearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchItem.swift; sourceTree = "<group>"; };
 		CBCB13C01D3D85B5004D53DB /* PersonItemDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonItemDetails.swift; sourceTree = "<group>"; };
 		CBCB13C41D3EB182004D53DB /* Debouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		CBD18D031D83052D00F271C4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		CBF6EC381D3BB202006126D7 /* oneContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBF6EC3D1D3BB202006126D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		CBF6EC3A1D3BB202006126D7 /* oneContact */ = {
 			isa = PBXGroup;
 			children = (
+				CBD18D031D83052D00F271C4 /* logo.png */,
 				CBF6EC3B1D3BB202006126D7 /* AppDelegate.swift */,
 				CBF6EC3D1D3BB202006126D7 /* ViewController.swift */,
 				CBF6EC3F1D3BB202006126D7 /* Main.storyboard */,
@@ -316,6 +319,7 @@
 			files = (
 				CB2EEFBA1D3BE41F003827E9 /* Owner.plist in Resources */,
 				CBF6EC461D3BB202006126D7 /* LaunchScreen.storyboard in Resources */,
+				CBD18D041D83052D00F271C4 /* logo.png in Resources */,
 				CBFC7AE31D46ADBB00311EC3 /* Employees.plist in Resources */,
 				CBF6EC431D3BB202006126D7 /* Assets.xcassets in Resources */,
 				CBF6EC411D3BB202006126D7 /* Main.storyboard in Resources */,

@@ -16,7 +16,7 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate, MFMailCo
     
     var filteredArray = [PersonItem]() // Already search data
     //var personsArray = [PersonItem]() // People stored localy
-    var baseArray = [PersonItem]() // Saved database
+    //var baseArray = [PersonItem]() // Saved database
     
     @IBOutlet weak var options: UIBarButtonItem!
     
@@ -210,40 +210,56 @@ class MasterViewController: UITableViewController, NSXMLParserDelegate, MFMailCo
     }
 
     func searchItems() {
-        print("New search : clean table")
+        NSLog("New search : clean table")
         filteredArray.removeAll(keepCapacity: false)
         
         let searchText = searchController.searchBar.text?.lowercaseString
         
-        filteredArray=self.baseArray.filter() {
+        /*filteredArray=self.baseArray.filter() {
             ($0.surname.lowercaseString as NSString).containsString(searchText!)
-        }
+        }*/
         
-        self.filteredArray.sortInPlace({ $0.getNameForListing() < $1.getNameForListing() })
-        self.tableView.reloadData()
+        //self.filteredArray.sortInPlace({ $0.getNameForListing() < $1.getNameForListing() })
+        //self.tableView.reloadData()
         
         let agil = AgilAPI()
         agil.searchSurnames("*"+searchText!+"*") {
             (completionSurnames: [PersonItem]) in //agilutils.parseAgilResults(result)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                print(String(completionSurnames.count)+" persons after surname search")
+                NSLog(String(completionSurnames.count)+" persons after surname search")
                 for p in completionSurnames {
-                    //if (self.personsArray.filter{$0.igg == p.igg}.count == 0) {
-                    //    self.personsArray.append(p)
-                    //}
-                    if (self.baseArray.filter{$0.igg == p.igg}.count == 0) {
+                    if (self.self.filteredArray.filter{$0.igg == p.igg}.count == 0) {
+                        self.self.filteredArray.append(p)
+                    }
+                    /*if (self.baseArray.filter{$0.igg == p.igg}.count == 0) {
                         let dict = ["surname": p.surname, "name": p.name, "entity" : p.getEntityName()]
                         PlistManager.sharedInstance.addNewItemWithKey(p.igg, value: dict)
                         self.baseArray.append(p)
-                    }
+                    }*/
                 }
-                self.filteredArray=self.baseArray.filter() {
+                /*self.filteredArray=self.baseArray.filter() {
                     ($0.surname.lowercaseString as NSString).containsString(searchText!)
-                }
+                }*/
                 self.filteredArray.sortInPlace({ $0.getNameForListing() < $1.getNameForListing() })
                 self.tableView.reloadData()
             })
         }
+        
+        /*
+        agil.searchNames("*"+searchText!+"*") {
+            (completionSurnames: [PersonItem]) in //agilutils.parseAgilResults(result)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                NSLog(String(completionSurnames.count)+" persons after name search")
+                for p in completionSurnames {
+                    if (self.self.filteredArray.filter{$0.igg == p.igg}.count == 0) {
+                        self.self.filteredArray.append(p)
+                    }
+                }
+                self.filteredArray.sortInPlace({ $0.getNameForListing() < $1.getNameForListing() })
+                self.tableView.reloadData()
+            })
+        }*/
+        
     }
     
 } // end of class
